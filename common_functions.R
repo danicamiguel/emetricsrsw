@@ -1,0 +1,30 @@
+library(tidyverse)
+library(dplyr)
+library(mosaic)
+library(ggplot2)
+
+data("mtcars")
+
+sum <- function(variable, dataset) {
+  return(favstats(variable, data = dataset))
+}
+
+describe <- function(dataset) {
+  return(str(dataset))
+}
+
+list <- function(dataset){
+  return(view(dataset))
+}
+
+list_2 <- function(dataset){
+  return(view(head(dataset,2)))
+}
+
+list_10 <- function(dataset){
+  return(view(head(dataset,10)))
+}
+
+graph <- function(variable1,variable2, dataset){
+  return(ggplot(dataset, aes(x=variable2, y=variable1)) + geom_point())
+
