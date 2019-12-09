@@ -14,17 +14,17 @@ describe <- function(dataset) {
 }
 
 list <- function(dataset){
-  return(view(dataset))
+  return(View(dataset))
 }
 
 list_2 <- function(dataset){
-  return(view(head(dataset,2)))
+  return(View(head(dataset,2)))
 }
 
 list_10 <- function(dataset){
-  return(view(head(dataset,10)))
+  return(View(head(dataset,10)))
 }
 
 graph <- function(variable1,variable2, dataset){
   return(ggplot(dataset, aes(x=variable2, y=variable1)) + geom_point())
-
+}
