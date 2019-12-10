@@ -28,3 +28,7 @@ list_10 <- function(dataset){
 graph <- function(variable1,variable2, dataset){
   return(ggplot(dataset, aes(x=variable2, y=variable1)) + geom_point())
 }
+
+use.csv <- function(dataset){
+  return(read.csv("dataset"))
+}
