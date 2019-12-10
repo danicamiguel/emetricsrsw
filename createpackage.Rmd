@@ -5,10 +5,12 @@ output: html_document
 
 ```{r}
 library(devtools)
-#library(usethis)
+library(usethis)
 ```
 
 ```{r}
 create_tidy_package("emetricsrsw")
 ```
+
+
 
