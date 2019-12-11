@@ -19,6 +19,14 @@ The goal of `emetricsrsw` package is to support the exercises and examples from 
 
 ```r
 devtools::install_github("danicamiguel/emetricsrsw")
+#>          checking for file 'C:\Users\Fatima\AppData\Local\Temp\RtmpaeIP4D\remotes1cd852a67921\danicamiguel-emetricsrsw-e212392/DESCRIPTION' ...  v  checking for file 'C:\Users\Fatima\AppData\Local\Temp\RtmpaeIP4D\remotes1cd852a67921\danicamiguel-emetricsrsw-e212392/DESCRIPTION' (1.1s)
+#>       -  preparing 'emetricsrsw':
+#>    checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information
+#>       -  checking for LF line-endings in source and make files and shell scripts
+#> -  checking for empty or unneeded directories
+#>       -  building 'emetricsrsw_0.0.0.9000.tar.gz'
+#>      
+#> 
 ```
 
 
