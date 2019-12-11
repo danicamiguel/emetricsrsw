@@ -88,16 +88,13 @@ library(mosaic)
 sum(caschool)
 ```
 
+![Summary of caschool dataset from STATA.](emetricsrsw/data-raw/sum_caschool.png)
+
 ```{r}
 sum_var(caschool$enrl_tot, caschool)
 ```
 
-## Comparing to STATA Output
-```{r figurename, echo=FALSE, out.width = '90%'}
-knitr::include_graphics("sum_caschool.png")
-
-knitr::include_graphics("sum_enrollment.png")
-```
+![Summary of enrollment variable from STATA.](emetricsrsw/data-raw/sum_enrollment.png)
 
 ## Contributors
 
