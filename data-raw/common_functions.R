@@ -1,5 +1,6 @@
 library(tidyverse)
 library(dplyr)
+library(tibble)
 library(mosaic)
 library(ggplot2)
 
@@ -12,7 +13,7 @@ sum_var <- function(x, dataset) {
 }
 
 describe <- function(dataset) {
-  return(str(dataset))
+  return(glimpse(dataset))
 }
 
 list <- function(dataset){
@@ -31,7 +32,7 @@ graph <- function(variable1,variable2, dataset){
   return(ggplot(dataset, aes(x=variable2, y=variable1)) + geom_point())
 }
 
-reg <- function(x, y, dataset){
-  return(lm(y ~ x, data = dataset, na.rm = TRUE))
+reg <- function(y, x, data){
+  fit <- lm(y~x, data = data)
+  return(fit)
 }
-
