@@ -19,14 +19,14 @@ The goal of `emetricsrsw` package is to support the exercises and examples from 
 
 ```r
 devtools::install_github("danicamiguel/emetricsrsw")
-#>          checking for file 'C:\Users\Fatima\AppData\Local\Temp\Rtmpqig9UH\remotes15303d2e272d\danicamiguel-emetricsrsw-f56252b/DESCRIPTION' ...  v  checking for file 'C:\Users\Fatima\AppData\Local\Temp\Rtmpqig9UH\remotes15303d2e272d\danicamiguel-emetricsrsw-f56252b/DESCRIPTION' (858ms)
-#>       -  preparing 'emetricsrsw':
-#>    checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information
-#>       -  checking for LF line-endings in source and make files and shell scripts
-#>       -  checking for empty or unneeded directories
-#>       -  building 'emetricsrsw_0.0.0.9000.tar.gz'
+#>      checking for file ‘/private/var/folders/kn/q9sy14vx0ss61z7d7gtjnk7c0000gn/T/RtmptSqy8l/remotes11a509ae8151/danicamiguel-emetricsrsw-362280d/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/kn/q9sy14vx0ss61z7d7gtjnk7c0000gn/T/RtmptSqy8l/remotes11a509ae8151/danicamiguel-emetricsrsw-362280d/DESCRIPTION’
+#> ─  preparing ‘emetricsrsw’:
+#> ✔  checking DESCRIPTION meta-information
+#>   ─  checking for LF line-endings in source and make files and shell scripts
+#> ─  checking for empty or unneeded directories
+#> ─  building ‘emetricsrsw_0.0.0.9000.tar.gz’
 #>      
-#> 
+#> 
 ```
 
 
@@ -90,44 +90,37 @@ library(mosaic)
 
 #using command to get list of summary statistics for a variable based on user input, also known as 'sum' in STATA
 sum(caschool)
-#>     observat        dist_cod        county            district        
-#>  Min.   :  1.0   Min.   :61382   Length:420         Length:420        
-#>  1st Qu.:105.8   1st Qu.:64308   Class :character   Class :character  
-#>  Median :210.5   Median :67761   Mode  :character   Mode  :character  
-#>  Mean   :210.5   Mean   :67473                                        
-#>  3rd Qu.:315.2   3rd Qu.:70419                                        
-#>  Max.   :420.0   Max.   :75440                                        
-#>    gr_span             enrl_tot          teachers          calw_pct     
-#>  Length:420         Min.   :   81.0   Min.   :   4.85   Min.   : 0.000  
-#>  Class :character   1st Qu.:  379.0   1st Qu.:  19.66   1st Qu.: 4.395  
-#>  Mode  :character   Median :  950.5   Median :  48.56   Median :10.520  
-#>                     Mean   : 2628.8   Mean   : 129.07   Mean   :13.246  
-#>                     3rd Qu.: 3008.0   3rd Qu.: 146.35   3rd Qu.:18.981  
-#>                     Max.   :27176.0   Max.   :1429.00   Max.   :78.994  
-#>     meal_pct         computer         testscr         comp_stu      
-#>  Min.   :  0.00   Min.   :   0.0   Min.   :605.5   Min.   :0.00000  
-#>  1st Qu.: 23.28   1st Qu.:  46.0   1st Qu.:640.0   1st Qu.:0.09377  
-#>  Median : 41.75   Median : 117.5   Median :654.5   Median :0.12546  
-#>  Mean   : 44.71   Mean   : 303.4   Mean   :654.2   Mean   :0.13593  
-#>  3rd Qu.: 66.86   3rd Qu.: 375.2   3rd Qu.:666.7   3rd Qu.:0.16447  
-#>  Max.   :100.00   Max.   :3324.0   Max.   :706.8   Max.   :0.42083  
-#>     expn_stu         str            avginc           el_pct      
-#>  Min.   :3926   Min.   :14.00   Min.   : 5.335   Min.   : 0.000  
-#>  1st Qu.:4906   1st Qu.:18.58   1st Qu.:10.639   1st Qu.: 1.941  
-#>  Median :5215   Median :19.72   Median :13.728   Median : 8.778  
-#>  Mean   :5312   Mean   :19.64   Mean   :15.317   Mean   :15.768  
-#>  3rd Qu.:5601   3rd Qu.:20.87   3rd Qu.:17.629   3rd Qu.:22.970  
-#>  Max.   :7712   Max.   :25.80   Max.   :55.328   Max.   :85.540  
-#>     read_scr        math_scr    
-#>  Min.   :604.5   Min.   :605.4  
-#>  1st Qu.:640.4   1st Qu.:639.4  
-#>  Median :655.8   Median :652.5  
-#>  Mean   :655.0   Mean   :653.3  
-#>  3rd Qu.:668.7   3rd Qu.:665.9  
-#>  Max.   :704.0   Max.   :709.5
+#>  Observation Number    dist_cod        county            district           gr_span         
+#>  Min.   :  1.0      Min.   :61382   Length:420         Length:420         Length:420        
+#>  1st Qu.:105.8      1st Qu.:64308   Class :character   Class :character   Class :character  
+#>  Median :210.5      Median :67760   Mode  :character   Mode  :character   Mode  :character  
+#>  Mean   :210.5      Mean   :67473                                                           
+#>  3rd Qu.:315.2      3rd Qu.:70419                                                           
+#>  Max.   :420.0      Max.   :75440                                                           
+#>     enrl_tot          teachers          calw_pct         meal_pct         computer     
+#>  Min.   :   81.0   Min.   :   4.85   Min.   : 0.000   Min.   :  0.00   Min.   :   0.0  
+#>  1st Qu.:  379.0   1st Qu.:  19.66   1st Qu.: 4.395   1st Qu.: 23.28   1st Qu.:  46.0  
+#>  Median :  950.5   Median :  48.56   Median :10.520   Median : 41.75   Median : 117.5  
+#>  Mean   : 2628.8   Mean   : 129.07   Mean   :13.246   Mean   : 44.71   Mean   : 303.4  
+#>  3rd Qu.: 3008.0   3rd Qu.: 146.35   3rd Qu.:18.981   3rd Qu.: 66.86   3rd Qu.: 375.2  
+#>  Max.   :27176.0   Max.   :1429.00   Max.   :78.994   Max.   :100.00   Max.   :3324.0  
+#>     testscr         comp_stu          expn_stu         str            avginc      
+#>  Min.   :605.5   Min.   :0.00000   Min.   :3926   Min.   :14.00   Min.   : 5.335  
+#>  1st Qu.:640.0   1st Qu.:0.09377   1st Qu.:4906   1st Qu.:18.58   1st Qu.:10.639  
+#>  Median :654.5   Median :0.12546   Median :5215   Median :19.72   Median :13.728  
+#>  Mean   :654.2   Mean   :0.13593   Mean   :5312   Mean   :19.64   Mean   :15.317  
+#>  3rd Qu.:666.7   3rd Qu.:0.16447   3rd Qu.:5601   3rd Qu.:20.87   3rd Qu.:17.629  
+#>  Max.   :706.8   Max.   :0.42083   Max.   :7712   Max.   :25.80   Max.   :55.328  
+#>      el_pct          read_scr        math_scr    
+#>  Min.   : 0.000   Min.   :604.5   Min.   :605.4  
+#>  1st Qu.: 1.941   1st Qu.:640.4   1st Qu.:639.4  
+#>  Median : 8.778   Median :655.8   Median :652.5  
+#>  Mean   :15.768   Mean   :655.0   Mean   :653.3  
+#>  3rd Qu.:22.970   3rd Qu.:668.7   3rd Qu.:665.9  
+#>  Max.   :85.540   Max.   :704.0   Max.   :709.5
 ```
 
-![Summary of caschool dataset from STATA.](emetricsrsw/data-raw/sum_caschool.png)
+![Summary of caschool dataset from STATA.](~/sum_caschool.png)
 
 
 ```r
@@ -136,7 +129,7 @@ sum_var(caschool$enrl_tot, caschool)
 #>   81 379  950.5 3008 27176 2628.793 3913.105 420       0
 ```
 
-![Summary of enrollment variable from STATA.](emetricsrsw/data-raw/sum_enrollment.png)
+![Summary of enrollment variable from STATA.](~/sum_enrollment.png)
 
 ## Contributors
 
