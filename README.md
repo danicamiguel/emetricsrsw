@@ -19,11 +19,11 @@ The goal of `emetricsrsw` package is to support the exercises and examples from 
 
 ```r
 devtools::install_github("danicamiguel/emetricsrsw")
-#>      checking for file ‘/private/var/folders/kn/q9sy14vx0ss61z7d7gtjnk7c0000gn/T/RtmpIBjYqf/remotes11b7f4aab12e5/danicamiguel-emetricsrsw-b41d048/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/kn/q9sy14vx0ss61z7d7gtjnk7c0000gn/T/RtmpIBjYqf/remotes11b7f4aab12e5/danicamiguel-emetricsrsw-b41d048/DESCRIPTION’
-#> ─  preparing ‘emetricsrsw’:
-#> ✔  checking DESCRIPTION meta-information
+#>      checking for file ‘/private/var/folders/kn/q9sy14vx0ss61z7d7gtjnk7c0000gn/T/RtmpIBjYqf/remotes11b7f57586e3e/danicamiguel-emetricsrsw-38a028c/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/kn/q9sy14vx0ss61z7d7gtjnk7c0000gn/T/RtmpIBjYqf/remotes11b7f57586e3e/danicamiguel-emetricsrsw-38a028c/DESCRIPTION’ (357ms)
+#>   ─  preparing ‘emetricsrsw’:
+#>      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
 #>   ─  checking for LF line-endings in source and make files and shell scripts
-#> ─  checking for empty or unneeded directories
+#>   ─  checking for empty or unneeded directories
 #> ─  building ‘emetricsrsw_0.0.0.9000.tar.gz’
 #>      
 #> 
