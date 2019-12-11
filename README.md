@@ -3,16 +3,15 @@ output: github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- badges: start -->
+[![Travis build status](https://travis-ci.org/danicamiguel/emetricsrsw.svg?branch=master)](https://travis-ci.org/danicamiguel/emetricsrsw)
+<!-- badges: end -->
 
 
 
 # emetricsrsw
 
-<!-- badges: start -->
-[![Travis build status](https://travis-ci.org/danicamiguel/emetricsrsw.svg?branch=master)](https://travis-ci.org/danicamiguel/emetricsrsw)
-<!-- badges: end -->
-
-The goal of `emetricsrsw` package is to support the exercises and examples from Chapter 5 of **Introduction to Econometrics** by James H. Stock and Mark W. Watson. Since this textbook was designed to assist learning in introductory econometrics courses, it's expected that users of the textbook will use statistical analysis software program STATA. However, given that STATA is not an open-source and free software (i.e. you must pay to obtain an operating license) this makes it inaccessible to those interested in learning econometrics from this textbook. `emetricsrsw` allows users to utilize some of the most commonly used STATA commands in R to perform statistical analysis - making it convenient and accessible for all readers of this textbook interested in learning econometrics without having to use STATA. It also takes some of the pressure off from those familiar with STATA commands but aren't as familiar with R's interface. Have fun!
+The goal of `emetricsrsw` package is to support the exercises and examples from Chapter 5 of *Introduction to Econometrics* by James H. Stock and Mark W. Watson. Since this textbook was designed to assist learning in introductory econometrics courses, it's expected that users of the textbook will use statistical analysis software program STATA. However, given that STATA is not an open-source and free software (i.e. you must pay to obtain an operating license) this makes it inaccessible to those interested in learning econometrics from this textbook. `emetricsrsw` allows users to utilize some of the most commonly used STATA commands in R to perform statistical analysis - making it convenient and accessible for all readers of this textbook interested in learning econometrics without having to use STATA. It also takes some of the pressure off from those familiar with STATA commands but aren't as familiar with R's interface. Have fun!
 
 ## Installation
 
@@ -20,14 +19,6 @@ The goal of `emetricsrsw` package is to support the exercises and examples from 
 
 ```r
 devtools::install_github("danicamiguel/emetricsrsw")
-#>      checking for file ‘/private/var/folders/kn/q9sy14vx0ss61z7d7gtjnk7c0000gn/T/RtmpiURF8B/remotes114bb300f280f/danicamiguel-emetricsrsw-d337b42/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/kn/q9sy14vx0ss61z7d7gtjnk7c0000gn/T/RtmpiURF8B/remotes114bb300f280f/danicamiguel-emetricsrsw-d337b42/DESCRIPTION’
-#> ─  preparing ‘emetricsrsw’:
-#> ✔  checking DESCRIPTION meta-information
-#>      
-#>   ─  checking for LF line-endings in source and make files and shell scripts
-#> ─  checking for empty or unneeded directories
-#> ─  building ‘emetricsrsw_0.0.0.9000.tar.gz’
-#> 
 ```
 
 
@@ -73,6 +64,15 @@ The California Standardized Testing and Reporting dataset contains data on test 
 
 `avginc`: District Average Income (in $1000's)
 
+## Functionality
+
+`sum`: provides summary statistics for all variables in a dataset
+
+`sum_var`: provides summary statistics for a variable in a dataset chosen by user
+
+`describe`: gives description of all variables in dataset, including variable classes (i.e. double, character, factor)
+
+
 ## Example
 
 
@@ -82,31 +82,35 @@ library(mosaic)
 
 #using command to get list of summary statistics for a variable based on user input, also known as 'sum' in STATA
 sum(mtcars)
-#>       mpg             cyl             disp             hp             drat      
-#>  Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0   Min.   :2.760  
-#>  1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5   1st Qu.:3.080  
-#>  Median :19.20   Median :6.000   Median :196.3   Median :123.0   Median :3.695  
-#>  Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7   Mean   :3.597  
-#>  3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0   3rd Qu.:3.920  
-#>  Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0   Max.   :4.930  
-#>        wt             qsec             vs               am              gear      
-#>  Min.   :1.513   Min.   :14.50   Min.   :0.0000   Min.   :0.0000   Min.   :3.000  
-#>  1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:3.000  
-#>  Median :3.325   Median :17.71   Median :0.0000   Median :0.0000   Median :4.000  
-#>  Mean   :3.217   Mean   :17.85   Mean   :0.4375   Mean   :0.4062   Mean   :3.688  
-#>  3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:4.000  
-#>  Max.   :5.424   Max.   :22.90   Max.   :1.0000   Max.   :1.0000   Max.   :5.000  
-#>       carb      
-#>  Min.   :1.000  
-#>  1st Qu.:2.000  
-#>  Median :2.000  
-#>  Mean   :2.812  
-#>  3rd Qu.:4.000  
-#>  Max.   :8.000
+#>       mpg             cyl             disp             hp       
+#>  Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  
+#>  1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  
+#>  Median :19.20   Median :6.000   Median :196.3   Median :123.0  
+#>  Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  
+#>  3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  
+#>  Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  
+#>       drat             wt             qsec             vs        
+#>  Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  
+#>  1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  
+#>  Median :3.695   Median :3.325   Median :17.71   Median :0.0000  
+#>  Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  
+#>  3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  
+#>  Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  
+#>        am              gear            carb      
+#>  Min.   :0.0000   Min.   :3.000   Min.   :1.000  
+#>  1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  
+#>  Median :0.0000   Median :4.000   Median :2.000  
+#>  Mean   :0.4062   Mean   :3.688   Mean   :2.812  
+#>  3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  
+#>  Max.   :1.0000   Max.   :5.000   Max.   :8.000
 
 sum_var(mtcars$mpg, mtcars)
 #>   min     Q1 median   Q3  max     mean       sd  n missing
 #>  10.4 15.425   19.2 22.8 33.9 20.09062 6.026948 32       0
 ```
 
+## Contributors
 
+- [Lizette Carpenter](https://github.com/lcarpenter20)
+- [Fatima Keita](https://github.com/fatimak98)
+- [Danica Miguel](https://github.com/danicamiguel)

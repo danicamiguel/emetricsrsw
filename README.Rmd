@@ -75,7 +75,7 @@ The California Standardized Testing and Reporting dataset contains data on test 
 
 `sum_var`: provides summary statistics for a variable in a dataset chosen by user
 
-`describe`: 
+`describe`: gives description of all variables in dataset, including variable classes (i.e. double, character, factor)
 
 
 ## Example

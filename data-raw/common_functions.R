@@ -1,5 +1,6 @@
 library(tidyverse)
 library(dplyr)
+library(tibble)
 library(mosaic)
 library(ggplot2)
 
@@ -8,17 +9,12 @@ sum <- function(dataset){
   return(summary(dataset, na.rm = TRUE))
 }
 
-<<<<<<< HEAD
-sum_var <- function(x) {
-  return(favstats(x, na.rm = TRUE))
-=======
 sum_var <- function(x, dataset) {
   return(favstats(x, data = data))
->>>>>>> cc53220e251077df4df0b699f9233f58fc85f81a
 }
 
 describe <- function(dataset) {
-  return(str(dataset))
+  return(glimpse(dataset))
 }
 
 list <- function(dataset){
