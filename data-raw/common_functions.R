@@ -3,7 +3,7 @@ library(dplyr)
 library(mosaic)
 library(ggplot2)
 
-data("mtcars")
+#data("mtcars")
 
 sum <- function(variable, dataset) {
   return(favstats(variable, data = dataset))
@@ -29,10 +29,8 @@ graph <- function(variable1,variable2, dataset){
   return(ggplot(dataset, aes(x=variable2, y=variable1)) + geom_point())
 }
 
-use.csv <- function(dataset){
-  return(read.csv("dataset"))
+reg <- function(rg){
+  rg <- lm(y~x, data = data)
+  return(rg)
 }
 
-gen <- function(new_variable, method, variable) {
-  new_variable <- method(variable)
-}
