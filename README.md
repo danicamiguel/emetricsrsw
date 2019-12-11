@@ -7,8 +7,7 @@ emetricsrsw
 <!-- badges: end -->
 The goal of emetricsrsw is to ...
 
-Installation
-------------
+`dist_code`: District Code `read_scr`: Average Reading Score `math_scr`: Average Math Score `county`: Country `district`: District `gr_span`: Grade Span of District `enrl_tot`: Total Enrollment `teachers`: Teachers `computer`: Number of Computers \#\# Installation
 
 You can install the released version of emetricsrsw from [CRAN](https://CRAN.R-project.org) with:
 
