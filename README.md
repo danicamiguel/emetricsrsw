@@ -9,11 +9,8 @@ output: github_document
 # emetricsrsw
 
 <!-- badges: start -->
-<<<<<<< HEAD
+[![Travis build status](https://travis-ci.org/danicamiguel/emetricsrsw.svg?branch=master)](https://travis-ci.org/danicamiguel/emetricsrsw)
 <!-- badges: end -->
-=======
-[![Travis build status](https://travis-ci.org/danicamiguel/emetricsrsw.svg?branch=master)](https://travis-ci.org/danicamiguel/emetricsrsw) <!-- badges: end -->
->>>>>>> d55eb0c7247119e72ef0761712db977a1d4bdd27
 
 The goal of `emetricsrsw` package is to support the exercises and examples from Chapter 5 of **Introduction to Econometrics** by James H. Stock and Mark W. Watson. Since this textbook was designed to assist learning in introductory econometrics courses, it's expected that users of the textbook will use statistical analysis software program STATA. However, given that STATA is not an open-source and free software (i.e. you must pay to obtain an operating license) this makes it inaccessible to those interested in learning econometrics from this textbook. `emetricsrsw` allows users to utilize some of the most commonly used STATA commands in R to perform statistical analysis - making it convenient and accessible for all readers of this textbook interested in learning econometrics without having to use STATA. It also takes some of the pressure off from those familiar with STATA commands but aren't as familiar with R's interface. Have fun!
 
@@ -23,6 +20,14 @@ The goal of `emetricsrsw` package is to support the exercises and examples from 
 
 ```r
 devtools::install_github("danicamiguel/emetricsrsw")
+#>      checking for file ‘/private/var/folders/kn/q9sy14vx0ss61z7d7gtjnk7c0000gn/T/RtmpiURF8B/remotes114bb300f280f/danicamiguel-emetricsrsw-d337b42/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/kn/q9sy14vx0ss61z7d7gtjnk7c0000gn/T/RtmpiURF8B/remotes114bb300f280f/danicamiguel-emetricsrsw-d337b42/DESCRIPTION’
+#> ─  preparing ‘emetricsrsw’:
+#> ✔  checking DESCRIPTION meta-information
+#>      
+#>   ─  checking for LF line-endings in source and make files and shell scripts
+#> ─  checking for empty or unneeded directories
+#> ─  building ‘emetricsrsw_0.0.0.9000.tar.gz’
+#> 
 ```
 
 
@@ -74,67 +79,9 @@ The California Standardized Testing and Reporting dataset contains data on test 
 ```r
 library(emetricsrsw)
 library(mosaic)
-#> Warning: package 'mosaic' was built under R version 3.4.4
-#> Loading required package: dplyr
-#> Warning: package 'dplyr' was built under R version 3.4.4
-#> 
-#> Attaching package: 'dplyr'
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
-#> Loading required package: lattice
-#> Warning: package 'lattice' was built under R version 3.4.4
-#> Loading required package: ggformula
-#> Warning: package 'ggformula' was built under R version 3.4.4
-#> Loading required package: ggplot2
-#> Warning: package 'ggplot2' was built under R version 3.4.4
-#> Loading required package: ggstance
-#> Warning: package 'ggstance' was built under R version 3.4.4
-#> 
-#> Attaching package: 'ggstance'
-#> The following objects are masked from 'package:ggplot2':
-#> 
-#>     geom_errorbarh, GeomErrorbarh
-#> 
-#> New to ggformula?  Try the tutorials: 
-#> 	learnr::run_tutorial("introduction", package = "ggformula")
-#> 	learnr::run_tutorial("refining", package = "ggformula")
-#> Loading required package: mosaicData
-#> Warning: package 'mosaicData' was built under R version 3.4.4
-#> Loading required package: Matrix
-#> 
-#> The 'mosaic' package masks several functions from core packages in order to add 
-#> additional features.  The original behavior of these functions should not be affected by this.
-#> 
-#> Note: If you use the Matrix package, be sure to load it BEFORE loading mosaic.
-#> 
-#> Attaching package: 'mosaic'
-#> The following object is masked _by_ '.GlobalEnv':
-#> 
-#>     sum
-#> The following object is masked from 'package:Matrix':
-#> 
-#>     mean
-#> The following object is masked from 'package:ggplot2':
-#> 
-#>     stat
-#> The following objects are masked from 'package:dplyr':
-#> 
-#>     count, do, tally
-#> The following objects are masked from 'package:stats':
-#> 
-#>     binom.test, cor, cor.test, cov, fivenum, IQR, median, prop.test, quantile, sd,
-#>     t.test, var
-#> The following objects are masked from 'package:base':
-#> 
-#>     max, mean, min, prod, range, sample, sum
 
 #using command to get list of summary statistics for a variable based on user input, also known as 'sum' in STATA
 sum(mtcars)
-<<<<<<< HEAD
 #>       mpg             cyl             disp             hp             drat      
 #>  Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0   Min.   :2.760  
 #>  1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5   1st Qu.:3.080  
@@ -160,11 +107,6 @@ sum(mtcars)
 sum_var(mtcars$mpg, mtcars)
 #>   min     Q1 median   Q3  max     mean       sd  n missing
 #>  10.4 15.425   19.2 22.8 33.9 20.09062 6.026948 32       0
-=======
-#> [1] 13942.2
-
-#sum_var(mtcars$mpg)
->>>>>>> d55eb0c7247119e72ef0761712db977a1d4bdd27
 ```
 
 

@@ -79,11 +79,7 @@ library(mosaic)
 #using command to get list of summary statistics for a variable based on user input, also known as 'sum' in STATA
 sum(mtcars)
 
-<<<<<<< HEAD
 sum_var(mtcars$mpg, mtcars)
-=======
-#sum_var(mtcars$mpg)
->>>>>>> d55eb0c7247119e72ef0761712db977a1d4bdd27
 ```
 
 
