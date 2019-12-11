@@ -14,32 +14,6 @@ Installation
 
 ``` r
 devtools::install_github("danicamiguel/emetricsrsw")
-#> Downloading GitHub repo danicamiguel/emetricsrsw@master
-#>   
-   checking for file ‘/private/var/folders/mg/y4d40lbd09597_2q68vxlsl00000gn/T/Rtmps0xOrA/remotes151559e34a75/danicamiguel-emetricsrsw-36f8bc8/DESCRIPTION’ ...
-  
-✔  checking for file ‘/private/var/folders/mg/y4d40lbd09597_2q68vxlsl00000gn/T/Rtmps0xOrA/remotes151559e34a75/danicamiguel-emetricsrsw-36f8bc8/DESCRIPTION’
-#> 
-  
-─  preparing ‘emetricsrsw’:
-#> 
-  
-   checking DESCRIPTION meta-information ...
-  
-✔  checking DESCRIPTION meta-information
-#> 
-  
-─  checking for LF line-endings in source and make files and shell scripts
-#> 
-  
-─  checking for empty or unneeded directories
-#> 
-  
-─  building ‘emetricsrsw_0.0.0.9000.tar.gz’
-#> 
-  
-   
-#> 
 ```
 
 ``` r
