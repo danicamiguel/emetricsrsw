@@ -88,13 +88,13 @@ library(mosaic)
 sum(caschool)
 ```
 
-![Summary of caschool dataset from STATA.](~/sum_caschool.png)
+![Summary of caschool dataset from STATA.](sum_caschool.png)
 
 ```{r}
 sum_var(caschool$enrl_tot, caschool)
 ```
 
-![Summary of enrollment variable from STATA.](~/sum_enrollment.png)
+![Summary of enrollment variable from STATA.](sum_enrollment.png)
 
 ## Contributors
 

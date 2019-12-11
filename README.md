@@ -19,7 +19,7 @@ The goal of `emetricsrsw` package is to support the exercises and examples from 
 
 ```r
 devtools::install_github("danicamiguel/emetricsrsw")
-#>      checking for file ‘/private/var/folders/kn/q9sy14vx0ss61z7d7gtjnk7c0000gn/T/RtmptSqy8l/remotes11a509ae8151/danicamiguel-emetricsrsw-362280d/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/kn/q9sy14vx0ss61z7d7gtjnk7c0000gn/T/RtmptSqy8l/remotes11a509ae8151/danicamiguel-emetricsrsw-362280d/DESCRIPTION’
+#>      checking for file ‘/private/var/folders/kn/q9sy14vx0ss61z7d7gtjnk7c0000gn/T/RtmpIBjYqf/remotes11b7f4aab12e5/danicamiguel-emetricsrsw-b41d048/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/kn/q9sy14vx0ss61z7d7gtjnk7c0000gn/T/RtmpIBjYqf/remotes11b7f4aab12e5/danicamiguel-emetricsrsw-b41d048/DESCRIPTION’
 #> ─  preparing ‘emetricsrsw’:
 #> ✔  checking DESCRIPTION meta-information
 #>   ─  checking for LF line-endings in source and make files and shell scripts
@@ -120,7 +120,7 @@ sum(caschool)
 #>  Max.   :85.540   Max.   :704.0   Max.   :709.5
 ```
 
-![Summary of caschool dataset from STATA.](~/sum_caschool.png)
+![Summary of caschool dataset from STATA.](sum_caschool.png)
 
 
 ```r
@@ -129,7 +129,7 @@ sum_var(caschool$enrl_tot, caschool)
 #>   81 379  950.5 3008 27176 2628.793 3913.105 420       0
 ```
 
-![Summary of enrollment variable from STATA.](~/sum_enrollment.png)
+![Summary of enrollment variable from STATA.](sum_enrollment.png)
 
 ## Contributors
 
