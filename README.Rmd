@@ -85,9 +85,11 @@ library(emetricsrsw)
 library(mosaic)
 
 #using command to get list of summary statistics for a variable based on user input, also known as 'sum' in STATA
-sum(mtcars)
+sum(caschool)
+```
 
-sum_var(mtcars$mpg, mtcars)
+```{r}
+sum_var(caschool$enrl_tot, caschool)
 ```
 
 ## Contributors
@@ -95,3 +97,4 @@ sum_var(mtcars$mpg, mtcars)
 - [Lizette Carpenter](https://github.com/lcarpenter20)
 - [Fatima Keita](https://github.com/fatimak98)
 - [Danica Miguel](https://github.com/danicamiguel)
+

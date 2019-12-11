@@ -7,8 +7,6 @@ output: github_document
 [![Travis build status](https://travis-ci.org/danicamiguel/emetricsrsw.svg?branch=master)](https://travis-ci.org/danicamiguel/emetricsrsw)
 <!-- badges: end -->
 
-
-
 # emetricsrsw
 
 The goal of `emetricsrsw` package is to support the exercises and examples from Chapter 5 of *Introduction to Econometrics* by James H. Stock and Mark W. Watson. Since this textbook was designed to assist learning in introductory econometrics courses, it's expected that users of the textbook will use statistical analysis software program STATA. However, given that STATA is not an open-source and free software (i.e. you must pay to obtain an operating license) this makes it inaccessible to those interested in learning econometrics from this textbook. `emetricsrsw` allows users to utilize some of the most commonly used STATA commands in R to perform statistical analysis - making it convenient and accessible for all readers of this textbook interested in learning econometrics without having to use STATA. It also takes some of the pressure off from those familiar with STATA commands but aren't as familiar with R's interface. Have fun!
@@ -20,7 +18,6 @@ The goal of `emetricsrsw` package is to support the exercises and examples from 
 ```r
 devtools::install_github("danicamiguel/emetricsrsw")
 ```
-
 
 ```r
 library(emetricsrsw)
@@ -75,38 +72,47 @@ The California Standardized Testing and Reporting dataset contains data on test 
 
 ## Example
 
-
 ```r
 library(emetricsrsw)
 library(mosaic)
 
 #using command to get list of summary statistics for a variable based on user input, also known as 'sum' in STATA
-sum(mtcars)
-#>       mpg             cyl             disp             hp       
-#>  Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  
-#>  1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  
-#>  Median :19.20   Median :6.000   Median :196.3   Median :123.0  
-#>  Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  
-#>  3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  
-#>  Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  
-#>       drat             wt             qsec             vs        
-#>  Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  
-#>  1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  
-#>  Median :3.695   Median :3.325   Median :17.71   Median :0.0000  
-#>  Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  
-#>  3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  
-#>  Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  
-#>        am              gear            carb      
-#>  Min.   :0.0000   Min.   :3.000   Min.   :1.000  
-#>  1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  
-#>  Median :0.0000   Median :4.000   Median :2.000  
-#>  Mean   :0.4062   Mean   :3.688   Mean   :2.812  
-#>  3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  
-#>  Max.   :1.0000   Max.   :5.000   Max.   :8.000
 
-sum_var(mtcars$mpg, mtcars)
-#>   min     Q1 median   Q3  max     mean       sd  n missing
-#>  10.4 15.425   19.2 22.8 33.9 20.09062 6.026948 32       0
+sum(caschool)
+#>  Observation Number    dist_cod        county            district           gr_span         
+#>  Min.   :  1.0      Min.   :61382   Length:420         Length:420         Length:420        
+#>  1st Qu.:105.8      1st Qu.:64308   Class :character   Class :character   Class :character  
+#>  Median :210.5      Median :67760   Mode  :character   Mode  :character   Mode  :character  
+#>  Mean   :210.5      Mean   :67473                                                           
+#>  3rd Qu.:315.2      3rd Qu.:70419                                                           
+#>  Max.   :420.0      Max.   :75440                                                           
+#>     enrl_tot          teachers          calw_pct         meal_pct         computer     
+#>  Min.   :   81.0   Min.   :   4.85   Min.   : 0.000   Min.   :  0.00   Min.   :   0.0  
+#>  1st Qu.:  379.0   1st Qu.:  19.66   1st Qu.: 4.395   1st Qu.: 23.28   1st Qu.:  46.0  
+#>  Median :  950.5   Median :  48.56   Median :10.520   Median : 41.75   Median : 117.5  
+#>  Mean   : 2628.8   Mean   : 129.07   Mean   :13.246   Mean   : 44.71   Mean   : 303.4  
+#>  3rd Qu.: 3008.0   3rd Qu.: 146.35   3rd Qu.:18.981   3rd Qu.: 66.86   3rd Qu.: 375.2  
+#>  Max.   :27176.0   Max.   :1429.00   Max.   :78.994   Max.   :100.00   Max.   :3324.0  
+#>     testscr         comp_stu          expn_stu         str            avginc      
+#>  Min.   :605.5   Min.   :0.00000   Min.   :3926   Min.   :14.00   Min.   : 5.335  
+#>  1st Qu.:640.0   1st Qu.:0.09377   1st Qu.:4906   1st Qu.:18.58   1st Qu.:10.639  
+#>  Median :654.5   Median :0.12546   Median :5215   Median :19.72   Median :13.728  
+#>  Mean   :654.2   Mean   :0.13593   Mean   :5312   Mean   :19.64   Mean   :15.317  
+#>  3rd Qu.:666.7   3rd Qu.:0.16447   3rd Qu.:5601   3rd Qu.:20.87   3rd Qu.:17.629  
+#>  Max.   :706.8   Max.   :0.42083   Max.   :7712   Max.   :25.80   Max.   :55.328  
+#>      el_pct          read_scr        math_scr    
+#>  Min.   : 0.000   Min.   :604.5   Min.   :605.4  
+#>  1st Qu.: 1.941   1st Qu.:640.4   1st Qu.:639.4  
+#>  Median : 8.778   Median :655.8   Median :652.5  
+#>  Mean   :15.768   Mean   :655.0   Mean   :653.3  
+#>  3rd Qu.:22.970   3rd Qu.:668.7   3rd Qu.:665.9  
+#>  Max.   :85.540   Max.   :704.0   Max.   :709.5
+```
+
+```r
+sum_var(caschool$enrl_tot, caschool)
+#>  min  Q1 median   Q3   max     mean       sd   n missing
+#>   81 379  950.5 3008 27176 2628.793 3913.105 420       0
 ```
 
 ## Contributors

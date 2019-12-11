@@ -4,7 +4,6 @@ library(tibble)
 library(mosaic)
 library(ggplot2)
 
-
 sum <- function(dataset){
   return(summary(dataset, na.rm = TRUE))
 }
