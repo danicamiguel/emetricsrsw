@@ -32,12 +32,6 @@ devtools::install_github("danicamiguel/emetricsrsw")
 #> Downloading GitHub repo danicamiguel/emetricsrsw@master
 #>   
 
-✔  checking for file ‘/private/var/folders/kn/q9sy14vx0ss61z7d7gtjnk7c0000gn/T/RtmpxQChna/remotes10ffc43166eb3/danicamiguel-emetricsrsw-abf9043/DESCRIPTION’
-#> ─  preparing ‘emetricsrsw’:
-#> ✔  checking DESCRIPTION meta-information
-#> ─  checking for LF line-endings in source and make files and shell scripts
-#> ─  checking for empty or unneeded directories
-#> ─  building ‘emetricsrsw_0.0.0.9000.tar.gz’
 #> 
   
    
@@ -48,7 +42,7 @@ devtools::install_github("danicamiguel/emetricsrsw")
 library(emetricsrsw)
 ```
 
-And the development version from [GitHub](https://github.com/) with:
+
 
 ## Data
 
@@ -60,16 +54,6 @@ about this dataset see the [Companion
 Website](https://wps.pearsoned.com/aw_stock_ie_3/178/45691/11696965.cw/index.html)
 for Stock and Watson’s Introduction to Econometrics.
 
-`dist_code`: District Code `read_scr`: Average Reading Score `math_scr`:
-Average Math Score `county`: Country `district`: District `gr_span`:
-Grade Span of District `enrl_tot`: Total Enrollment `teachers`: Teachers
-`computer`: Number of Computers `testscr` : Average Test Scores,
-(read\_scr + math\_scre)/2 `comp_stu`: Computers per Student (computer /
-enrl\_tot) `expn_stu`: Expentitures per Student (in $’s) `str`: Student
-Teacher ratio (enrl\_tot / teachers) `el_pct`: Student Techer ratio
-(enrl\_tot / teachers) `meal_pct`: Percent Qualifying for Reduced-Price
-Lunch `calw_pct`: Percent Qualifying for Calworks `avginc`: District
-Average Income (in $1000’s)
 
 
 The California Standardized Testing and Reporting dataset contains data on test performance, school characteristics and student demographic backgrounds. All of these data were obtained from the [California Department of Education](www.cde.ca.gov). For more information about this dataset see the [Companion Website](https://wps.pearsoned.com/aw_stock_ie_3/178/45691/11696965.cw/index.html) for Stock and Watson's Introduction to Econometrics.
