@@ -9,7 +9,11 @@ output: github_document
 # emetricsrsw
 
 <!-- badges: start -->
+<<<<<<< HEAD
 <!-- badges: end -->
+=======
+[![Travis build status](https://travis-ci.org/danicamiguel/emetricsrsw.svg?branch=master)](https://travis-ci.org/danicamiguel/emetricsrsw) <!-- badges: end -->
+>>>>>>> d55eb0c7247119e72ef0761712db977a1d4bdd27
 
 The goal of `emetricsrsw` package is to support the exercises and examples from Chapter 5 of **Introduction to Econometrics** by James H. Stock and Mark W. Watson. Since this textbook was designed to assist learning in introductory econometrics courses, it's expected that users of the textbook will use statistical analysis software program STATA. However, given that STATA is not an open-source and free software (i.e. you must pay to obtain an operating license) this makes it inaccessible to those interested in learning econometrics from this textbook. `emetricsrsw` allows users to utilize some of the most commonly used STATA commands in R to perform statistical analysis - making it convenient and accessible for all readers of this textbook interested in learning econometrics without having to use STATA. It also takes some of the pressure off from those familiar with STATA commands but aren't as familiar with R's interface. Have fun!
 
@@ -130,6 +134,7 @@ library(mosaic)
 
 #using command to get list of summary statistics for a variable based on user input, also known as 'sum' in STATA
 sum(mtcars)
+<<<<<<< HEAD
 #>       mpg             cyl             disp             hp             drat      
 #>  Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0   Min.   :2.760  
 #>  1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5   1st Qu.:3.080  
@@ -155,6 +160,11 @@ sum(mtcars)
 sum_var(mtcars$mpg, mtcars)
 #>   min     Q1 median   Q3  max     mean       sd  n missing
 #>  10.4 15.425   19.2 22.8 33.9 20.09062 6.026948 32       0
+=======
+#> [1] 13942.2
+
+#sum_var(mtcars$mpg)
+>>>>>>> d55eb0c7247119e72ef0761712db977a1d4bdd27
 ```
 
 
