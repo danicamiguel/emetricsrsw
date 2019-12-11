@@ -29,6 +29,8 @@ following:
 
 ``` r
 devtools::install_github("danicamiguel/emetricsrsw")
+<<<<<<< HEAD
+=======
 #> Downloading GitHub repo danicamiguel/emetricsrsw@master
 #>   
 
@@ -36,6 +38,7 @@ devtools::install_github("danicamiguel/emetricsrsw")
   
    
 #> 
+>>>>>>> 0aecbe0520794ab9c4ff4f0627d53e53301d17f7
 ```
 
 ``` r
