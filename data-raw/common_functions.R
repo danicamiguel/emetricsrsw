@@ -9,8 +9,8 @@ sum <- function(dataset){
   return(summary(dataset, na.rm = TRUE))
 }
 
-sum_var <- function(x) {
-  return(favstats(x, data = data, na.rm = TRUE))
+sum_var <- function(x, dataset) {
+  return(favstats(x, data = data))
 }
 
 describe <- function(dataset) {
