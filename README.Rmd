@@ -25,7 +25,7 @@ The goal of `emetricsrsw` package is to support the exercises and examples from 
 `emetricsrsw` is hosted on Github and can be installed by running the following: 
 ```{r}
 devtools::install_github("danicamiguel/emetricsrsw")
-library(emetricsrsw)
+#library(emetricsrsw)
 ```
 
 And the development version from [GitHub](https://github.com/) with:
