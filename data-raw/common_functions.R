@@ -5,8 +5,12 @@ library(ggplot2)
 
 #data("mtcars")
 
-sum <- function(variable, dataset) {
-  return(favstats(variable, data = dataset))
+sum_var <- function(x, dataset) {
+  return(favstats(x, data = dataset, na.rm = TRUE))
+}
+
+sum <- function(dataset){
+  return(summary(dataset, na.rm = TRUE))
 }
 
 describe <- function(dataset) {
