@@ -3,8 +3,6 @@ library(dplyr)
 library(mosaic)
 library(ggplot2)
 
-#data("mtcars")
-
 sum <- function(dataset){
   return(summary(dataset, na.rm = TRUE))
 }
@@ -33,8 +31,7 @@ graph <- function(variable1,variable2, dataset){
   return(ggplot(dataset, aes(x=variable2, y=variable1)) + geom_point())
 }
 
-reg <- function(rg){
-  rg <- lm(y~x, data = data)
-  return(rg)
+reg <- function(x, y, dataset){
+  return(lm(y ~ x, data = dataset, na.rm = TRUE))
 }
 
