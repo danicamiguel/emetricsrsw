@@ -74,7 +74,9 @@ The California Standardized Testing and Reporting dataset contains data on test 
 ```{r example}
 library(emetricsrsw)
 #using command to get list of summary statistics for a variable based on user input, also known as 'sum' in STATA
-sum(mtcars$mpg)
+sum(mtcars)
+
+sum_var(mtcars$mpg)
 ```
 
 
