@@ -5,22 +5,50 @@ emetricsrsw
 
 <!-- badges: start -->
 <!-- badges: end -->
-The goal of emetricsrsw is to ...
+The goal of `emetricsrsw` package is to support the exercises and examples from Chapter 5 of **Introduction to Econometrics** by James H. Stock and Mark W. Watson. Since this textbook was designed to assist learning in introductory econometrics courses, it's expected that users of the textbook will use statistical analysis software program STATA. However, given that STATA is not an open-source and free software (i.e. you must pay to obtain an operating license) this makes it inaccessible to those interested in learning econometrics from this textbook. `emetricsrsw` allows users to utilize some of the most commonly used STATA commands in R to perform statistical analysis - making it convenient and accessible for all readers of this textbook interested in learning econometrics without having to use STATA. It also takes some of the pressure off from those familiar with STATA commands but aren't as familiar with R's interface. Have fun!
 
-`dist_code`: District Code `read_scr`: Average Reading Score `math_scr`: Average Math Score `county`: Country `district`: District `gr_span`: Grade Span of District `enrl_tot`: Total Enrollment `teachers`: Teachers `computer`: Number of Computers \#\# Installation
+Installation
+------------
 
-You can install the released version of emetricsrsw from [CRAN](https://CRAN.R-project.org) with:
+`emetricsrsw` is hosted on Github and can be installed by running the following:
 
 ``` r
-install.packages("emetricsrsw")
+devtools::install_github("danicamiguel/emetricsrsw")
+#> Downloading GitHub repo danicamiguel/emetricsrsw@master
+#>   
+   checking for file ‘/private/var/folders/mg/y4d40lbd09597_2q68vxlsl00000gn/T/RtmphhLy6A/remotesedb636ef8cf/danicamiguel-emetricsrsw-f87a22e/DESCRIPTION’ ...
+  
+✔  checking for file ‘/private/var/folders/mg/y4d40lbd09597_2q68vxlsl00000gn/T/RtmphhLy6A/remotesedb636ef8cf/danicamiguel-emetricsrsw-f87a22e/DESCRIPTION’
+#> 
+  
+─  preparing ‘emetricsrsw’:
+#> 
+  
+   checking DESCRIPTION meta-information ...
+  
+✔  checking DESCRIPTION meta-information
+#> 
+  
+─  checking for LF line-endings in source and make files and shell scripts
+#> 
+  
+─  checking for empty or unneeded directories
+#> 
+  
+─  building ‘emetricsrsw_0.0.0.9000.tar.gz’
+#> 
+  
+   
+#> 
+library(emetricsrsw)
 ```
 
 And the development version from [GitHub](https://github.com/) with:
 
-``` r
-# install.packages("devtools")
-devtools::install_github("danicamiguel/emetricsrsw")
-```
+Data
+----
+
+`dist_code`: District Code `read_scr`: Average Reading Score `math_scr`: Average Math Score `county`: Country `district`: District `gr_span`: Grade Span of District `enrl_tot`: Total Enrollment `teachers`: Teachers `computer`: Number of Computers
 
 Example
 -------
