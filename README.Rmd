@@ -80,7 +80,7 @@ The California Standardized Testing and Reporting dataset contains data on test 
 
 ## Example
 
-```{r example}
+```{r example, eval = FALSE}
 library(emetricsrsw)
 library(mosaic)
 
