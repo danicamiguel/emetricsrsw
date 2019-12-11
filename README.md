@@ -16,9 +16,9 @@ Installation
 devtools::install_github("danicamiguel/emetricsrsw")
 #> Downloading GitHub repo danicamiguel/emetricsrsw@master
 #>   
-   checking for file ‘/private/var/folders/mg/y4d40lbd09597_2q68vxlsl00000gn/T/RtmpAFWKLi/remotes127a3d894f1f/danicamiguel-emetricsrsw-265b8cf/DESCRIPTION’ ...
+   checking for file ‘/private/var/folders/mg/y4d40lbd09597_2q68vxlsl00000gn/T/RtmpJh8si8/remotes143439a57dec/danicamiguel-emetricsrsw-abf9043/DESCRIPTION’ ...
   
-✔  checking for file ‘/private/var/folders/mg/y4d40lbd09597_2q68vxlsl00000gn/T/RtmpAFWKLi/remotes127a3d894f1f/danicamiguel-emetricsrsw-265b8cf/DESCRIPTION’
+✔  checking for file ‘/private/var/folders/mg/y4d40lbd09597_2q68vxlsl00000gn/T/RtmpJh8si8/remotes143439a57dec/danicamiguel-emetricsrsw-abf9043/DESCRIPTION’
 #> 
   
 ─  preparing ‘emetricsrsw’:
@@ -40,7 +40,10 @@ devtools::install_github("danicamiguel/emetricsrsw")
   
    
 #> 
-#library(emetricsrsw)
+```
+
+``` r
+library(emetricsrsw)
 ```
 
 And the development version from [GitHub](https://github.com/) with:
