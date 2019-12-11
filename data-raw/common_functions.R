@@ -3,14 +3,13 @@ library(dplyr)
 library(mosaic)
 library(ggplot2)
 
-#data("mtcars")
 
 sum <- function(dataset){
   return(summary(dataset, na.rm = TRUE))
 }
 
 sum_var <- function(x) {
-  return(favstats(x, data = data, na.rm = TRUE))
+  return(favstats(x, na.rm = TRUE))
 }
 
 describe <- function(dataset) {
@@ -33,8 +32,7 @@ graph <- function(variable1,variable2, dataset){
   return(ggplot(dataset, aes(x=variable2, y=variable1)) + geom_point())
 }
 
-reg <- function(rg){
-  rg <- lm(y~x, data = data)
-  return(rg)
+reg <- function(y, x, data){
+  fit <- lm(y~x, data = data)
+  return(fit)
 }
-

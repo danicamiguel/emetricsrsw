@@ -3,6 +3,8 @@ output: github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- badges: start -->
+<!-- badges: end -->
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -14,9 +16,6 @@ knitr::opts_chunk$set(
 ```
 
 # emetricsrsw
-
-<!-- badges: start -->
-<!-- badges: end -->
 
 The goal of `emetricsrsw` package is to support the exercises and examples from Chapter 5 of **Introduction to Econometrics** by James H. Stock and Mark W. Watson. Since this textbook was designed to assist learning in introductory econometrics courses, it's expected that users of the textbook will use statistical analysis software program STATA. However, given that STATA is not an open-source and free software (i.e. you must pay to obtain an operating license) this makes it inaccessible to those interested in learning econometrics from this textbook. `emetricsrsw` allows users to utilize some of the most commonly used STATA commands in R to perform statistical analysis - making it convenient and accessible for all readers of this textbook interested in learning econometrics without having to use STATA. It also takes some of the pressure off from those familiar with STATA commands but aren't as familiar with R's interface. Have fun!
 
@@ -69,6 +68,15 @@ The California Standardized Testing and Reporting dataset contains data on test 
 
 `avginc`: District Average Income (in $1000's)
 
+## Functionality
+
+`sum`: provides summary statistics for all variables in a dataset
+
+`sum_var`: provides summary statistics for a variable in a dataset chosen by user
+
+`describe`: 
+
+
 ## Example
 
 ```{r example}
@@ -79,4 +87,8 @@ sum(mtcars)
 sum_var(mtcars$mpg)
 ```
 
+## Contributors
 
+- [Lizette Carpenter](https://github.com/lcarpenter20)
+- [Fatima Keita](https://github.com/fatimak98)
+- [Danica Miguel](https://github.com/danicamiguel)
