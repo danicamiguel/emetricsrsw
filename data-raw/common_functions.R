@@ -32,3 +32,7 @@ graph <- function(variable1,variable2, dataset){
 use.csv <- function(dataset){
   return(read.csv("dataset"))
 }
+
+gen <- function(new_variable, method, variable) {
+  new_variable <- method(variable)
+}
