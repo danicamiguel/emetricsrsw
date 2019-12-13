@@ -1,6 +1,6 @@
 library(tidyverse)
 library(dplyr)
-library(tibble)
+#library(tibble)
 library(mosaic)
 library(ggplot2)
 
@@ -32,7 +32,6 @@ stata_graph <- function(variable1,variable2, dataset){
   return(ggplot(dataset, aes(x=variable2, y=variable1)) + geom_point())
 }
 
-stata_reg <- function(y, x, data){
-  fit <- lm(y~x, data = data)
-  return(fit)
+stata_reg <- function(y, x){
+  return(summary(lm(y~x)))
 }
