@@ -33,5 +33,18 @@ stata_graph <- function(variable1,variable2, dataset){
 }
 
 stata_reg <- function(y, x){
-  return(summary(lm(y~x)))
+  return(lm(y~x))
 }
+
+stata_regcoeff <- function(y,x) {
+  return(summary(lm(y~x))$coefficients)
+}
+
+stata_logit <- function(y,x) {
+  return(glm(y~x))
+}
+
+stata_ci <- function(y,x) {
+  return(confint(lm(y~x)))
+}
+
