@@ -7,10 +7,9 @@
 #    stata_list_2: returns a new window containing the first two rows of a specified dataset. 
 #    stata_list_10: returns a new window containing the first ten rows of a specified dataset. 
 #    stata_graph: returns a scatterplot. 
-#    stata_reg:
-#    stata_regcoeff:
-#    stata_logit:
-#    stata_ci: 
+#    stata_reg: returns the summary results of a fitted model.
+#    stata_logit: returns the summary results of a fitted logistic model. 
+#    stata_ci: returns the confidence interval of a fitted linear model. 
 
 #' stata_sum 
 #' 
@@ -162,22 +161,67 @@ stata_list_10 <- function(dataset){
 stata_graph <- function(x, y, dataset){
   return(ggplot(dataset, aes(x=x, y=y)) + geom_point())
 }
-#' @import stats 
+
+#' stata_reg
+#' 
+#' Produces result summaries of a fitted model.
+#' 
+#' @param y - y variable 
+#' @param x - x variale 
+#' @return list of result summary of a fitted linear model 
+#' 
+#' @examples 
+#' stata_reg(caschool$testscr, caschool$avginc)
+#' stata_reg(mtcars$cyl, mtcars$mpg)
+#' 
+#' \dontrun{
+#' stata_reg(testscr, avginc)
+#' }
+#' 
+#' @import stats
+#' @export  
 stata_reg <- function(y, x){
-  return(lm(y~x))
+  return(summary(lm(y~x))) 
 }
 
+#' stata_logit 
+#' 
+#' Produces summary results of a fitted logistic model 
+#' 
+#' @param x - x variable 
+#' @param y - y variable 
+#' @return list of the result summary of a fitted logistic model 
+#' 
+#' @examples 
+#' stata_logit()
+#' \dontrun{
+#' stata_logit()
+#' }
+#' 
 #' @import stats 
-stata_regcoeff <- function(y,x) {
-  return(summary(lm(y~x))$coefficients)
-}
-
-#' @import stats 
+#' @export 
 stata_logit <- function(y,x) {
   return(glm(y~x, family = binomial(link = "logit")))
 }
 
+#' stata_ci 
+#' 
+#' Finds the confidence interval of a fitted linear model. 
+#' 
+#' @param x - x variable 
+#' @param y - y variable 
+#' @return a matrix (or vector) with columns giving lower and upper confidence limits for each parameter
+#' 
+#' @examples 
+#' stata_ci(caschool$testscr, caschool$avginc)
+#' stata_ci(mtcars$cyl, mtcars$mpg)
+#' 
+#' \dontrun{
+#' stata_ci(testscr, avginc)
+#' }
+#' 
 #' @import stats 
+#' @export 
 stata_ci <- function(y,x) {
   return(confint(lm(y~x)))
 }
