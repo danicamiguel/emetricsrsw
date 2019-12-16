@@ -16,7 +16,7 @@ Authors@R:
             role = c("aut"),
             email = "fkeita898@gmail.com"))
 Description: A companion to the exercises and examples from Chapter 5 of Introduction to Econometrics by James H. Stock and Mark W. Watson. This companion allows users to utilize some of the most commonly used STATA commands in R to perform statistical analysis.    
-License: What license it uses
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 2.10)
