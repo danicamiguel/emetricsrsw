@@ -1,38 +1,50 @@
 library(tidyverse)
 library(dplyr)
-library(tibble)
+#library(tibble)
 library(mosaic)
 library(ggplot2)
 
-sum <- function(dataset){
+stata_sum <- function(dataset){
   return(summary(dataset, na.rm = TRUE))
 }
 
-sum_var <- function(x, dataset) {
+stata_sum_var <- function(x, dataset) {
   return(favstats(x, data = data))
 }
 
-describe <- function(dataset) {
+stata_desc <- function(dataset) {
   return(glimpse(dataset))
 }
 
-list <- function(dataset){
+stata_list <- function(dataset){
   return(View(dataset))
 }
 
-list_2 <- function(dataset){
+stata_list_2 <- function(dataset){
   return(View(head(dataset,2)))
 }
 
-list_10 <- function(dataset){
+stata_list_10 <- function(dataset){
   return(View(head(dataset,10)))
 }
 
-graph <- function(variable1,variable2, dataset){
+stata_graph <- function(variable1,variable2, dataset){
   return(ggplot(dataset, aes(x=variable2, y=variable1)) + geom_point())
 }
 
-reg <- function(y, x, data){
-  fit <- lm(y~x, data = data)
-  return(fit)
+stata_reg <- function(y, x){
+  return(lm(y~x))
 }
+
+stata_regcoeff <- function(y,x) {
+  return(summary(lm(y~x))$coefficients)
+}
+
+stata_logit <- function(y,x) {
+  return(glm(y~x))
+}
+
+stata_ci <- function(y,x) {
+  return(confint(lm(y~x)))
+}
+
