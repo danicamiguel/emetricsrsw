@@ -174,7 +174,7 @@ stata_regcoeff <- function(y,x) {
 
 #' @import stats 
 stata_logit <- function(y,x) {
-  return(glm(y~x))
+  return(glm(y~x, family = binomial(link = "logit")))
 }
 
 #' @import stats 
