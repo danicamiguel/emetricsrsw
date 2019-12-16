@@ -1,13 +1,21 @@
 Package: emetricsrsw
-Title: What the Package Does (One Line, Title Case)
+Type:  
+Title: Econometrics Using R 
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
-           role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    c(person(given = "Danica",
+            family = "Miguel",
+            role = c("aut", "cre"),
+            email = "danicavmiguel@gmail.com"),
+      person(given = "Lizette",
+            family = "Carpenter",
+            role = c("aut", "cre"),
+            email = "lizettecarpenter@gmail.com"),
+      person(given = "Fatima",
+            family = "Keita",
+            role = c("aut", "cre"),
+            email = "first.last@example.com")
+Description: A companion to the exercises and examples from Chapter 5 of Introduction to Econometrics by James H. Stock and Mark W. Watson. This companion allows users to utilize some of the most commonly used STATA commands in R to perform statistical analysis.   
 License: What license it uses
 Encoding: UTF-8
 LazyData: true
