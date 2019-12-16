@@ -4,7 +4,7 @@ stata_sum <- function(dataset){
 }
 
 stata_sum_var <- function(x, dataset) {
-  return(favstats(x, data = data))
+  return(favstats(x, data = dataset))
 }
 
 stata_desc <- function(dataset) {
