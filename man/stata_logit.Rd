@@ -21,10 +21,3 @@ list of the result summary of a fitted logistic model
 \description{
 Produces summary results of a fitted logistic model
 }
-\examples{
-stata_logit()
-\dontrun{
-stata_logit()
-}
-
-}
