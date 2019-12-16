@@ -201,7 +201,7 @@ stata_reg <- function(y, x){
 #' @import stats 
 #' @export 
 stata_logit <- function(y,x) {
-  return(summary(glm(y~x)))
+  return(glm(y~x, family = binomial(link = "logit")))
 }
 
 #' stata_ci 
