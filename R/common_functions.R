@@ -157,6 +157,8 @@ stata_list_10 <- function(dataset){
 #' } 
 #' 
 #' @importFrom ggplot2 ggplot
+#' @importFrom ggplot2 aes
+#' @importFrom ggplot2 geom_point
 #' @export 
 stata_graph <- function(x, y, dataset){
   return(ggplot(dataset, aes(x=x, y=y)) + geom_point())
@@ -199,6 +201,7 @@ stata_reg <- function(y, x){
 #' }
 #' 
 #' @importFrom stats glm
+#' @importFrom stats family 
 #' @export 
 stata_logit <- function(y,x) {
   return(summmary(glm(y~x, family = binomial(link = "logit")))) 
