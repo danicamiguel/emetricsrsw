@@ -7,13 +7,15 @@
 stata_list_10(dataset)
 }
 \arguments{
-\item{dataset}{- an R object which can be coerced to a data frame}
+\item{dataset}{\itemize{
+\item an R object which can be coerced to a data frame
+}}
 }
 \value{
 a new window containing the first ten rows of a given dataset
 }
 \description{
-View dataset 
+View dataset
 Allows user to see a the first ten rows of a given dataset in a new window.
 }
 \examples{

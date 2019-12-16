@@ -7,9 +7,13 @@
 stata_logit(y, x)
 }
 \arguments{
-\item{y}{- y variable}
+\item{y}{\itemize{
+\item y variable
+}}
 
-\item{x}{- x variable}
+\item{x}{\itemize{
+\item x variable
+}}
 }
 \value{
 list of the result summary of a fitted logistic model

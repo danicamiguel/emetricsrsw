@@ -7,13 +7,15 @@
 stata_desc(dataset)
 }
 \arguments{
-\item{dataset}{- a data table}
+\item{dataset}{\itemize{
+\item a data table
+}}
 }
 \value{
 list of the dataset attributes including every column of the dataset
 }
 \description{
-Gives a glimpse of the dataset. 
+Gives a glimpse of the dataset.
 Provides detailed information of the dataset including the first 10 values of each of the columns.
 }
 \examples{

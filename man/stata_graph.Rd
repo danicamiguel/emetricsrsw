@@ -7,9 +7,13 @@
 stata_graph(x, y, dataset)
 }
 \arguments{
-\item{x}{- x varaible}
+\item{x}{\itemize{
+\item x varaible
+}}
 
-\item{y}{- y varaible}
+\item{y}{\itemize{
+\item y varaible
+}}
 }
 \value{
 scatterplot

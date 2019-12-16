@@ -7,9 +7,13 @@
 stata_reg(y, x)
 }
 \arguments{
-\item{y}{- y variable}
+\item{y}{\itemize{
+\item y variable
+}}
 
-\item{x}{- x variale}
+\item{x}{\itemize{
+\item x variale
+}}
 }
 \value{
 list of result summary of a fitted linear model

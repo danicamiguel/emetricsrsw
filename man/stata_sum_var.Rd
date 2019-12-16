@@ -7,15 +7,19 @@
 stata_sum_var(x, dataset)
 }
 \arguments{
-\item{x}{- a numeric vector, variable from a datset}
+\item{x}{\itemize{
+\item a numeric vector, variable from a datset
+}}
 
-\item{dataset}{- list, dataset}
+\item{dataset}{\itemize{
+\item list, dataset
+}}
 }
 \value{
 a vector of statistical summaries
 }
 \description{
-Summary results of a specified variable in a given dataset.  
+Summary results of a specified variable in a given dataset.
 Produces result summaries of the various model fitting functions.
 }
 \examples{

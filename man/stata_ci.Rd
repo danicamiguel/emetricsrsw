@@ -7,9 +7,13 @@
 stata_ci(y, x)
 }
 \arguments{
-\item{y}{- y variable}
+\item{y}{\itemize{
+\item y variable
+}}
 
-\item{x}{- x variable}
+\item{x}{\itemize{
+\item x variable
+}}
 }
 \value{
 a matrix (or vector) with columns giving lower and upper confidence limits for each parameter

@@ -7,13 +7,15 @@
 stata_sum(dataset)
 }
 \arguments{
-\item{dataset}{- list, dataset}
+\item{dataset}{\itemize{
+\item list, dataset
+}}
 }
 \value{
 list containing the summary results of the passed argument.
 }
 \description{
-Summary results of dataset. 
+Summary results of dataset.
 Produces result summaries of the various model fitting functions.
 }
 \examples{
