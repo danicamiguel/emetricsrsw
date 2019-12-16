@@ -6,7 +6,7 @@
 #    stata_list: returns a new window containing a specified dataset. 
 #    stata_list_2: returns a new window containing the first two rows of a specified dataset. 
 #    stata_list_10: returns a new window containing the first ten rows of a specified dataset. 
-#    stata_graph: 
+#    stata_graph: returns a scatterplot. 
 #    stata_reg:
 #    stata_regcoeff:
 #    stata_logit:
@@ -27,6 +27,7 @@
 #' \dontrun{
 #' stata_sum(caschool, mtcars)
 #' }
+#' 
 #' @export
 stata_sum <- function(dataset){
   return(summary(dataset, na.rm = TRUE))
@@ -48,6 +49,7 @@ stata_sum <- function(dataset){
 #' \dontrun{
 #' stata_sum_var(teachers, caschool)
 #' }
+#' 
 #'@import mosaic 
 #'@export 
 stata_sum_var <- function(x, dataset) {
@@ -69,6 +71,7 @@ stata_sum_var <- function(x, dataset) {
 #' \dontrun{
 #' stata_desc(caschool, mtcars)
 #' }
+#' 
 #'@import tibble 
 #'@export 
 stata_desc <- function(dataset) {
@@ -90,6 +93,7 @@ stata_desc <- function(dataset) {
 #' \dontrun{
 #' stata_list(caschool, mtcars)
 #' }
+#' 
 #'@export 
 stata_list <- function(dataset){
   return(View(dataset))
@@ -110,6 +114,7 @@ stata_list <- function(dataset){
 #' \dontrun{
 #' stata_list_2(caschool, mtcars)
 #' }
+#' 
 #'@export
 stata_list_2 <- function(dataset){
   return(View(head(dataset,2)))
@@ -130,6 +135,7 @@ stata_list_2 <- function(dataset){
 #' \dontrun{
 #' stata_list_10(caschool, mtcars)
 #' }
+#' 
 #'@export
 stata_list_10 <- function(dataset){
   return(View(head(dataset,10)))
@@ -139,9 +145,22 @@ stata_list_10 <- function(dataset){
 #' 
 #' Plots a scatterplot. 
 #' 
+#' @param x - x varaible 
+#' @param y - y varaible 
+#' @return scatterplot 
+#' 
+#' @examples 
+#' stata_graph(caschool$enrl_tot, caschool$teachers, caschool)
+#' stata_graph(mtcars$cyl, mtcars$cyl, mtcars)
+
+#' \dontrun{
+#' stata_graph(enrl_tot, teachers, caschool)
+#' } 
+#' 
 #' @import ggplot2
-stata_graph <- function(variable1,variable2, dataset){
-  return(ggplot(dataset, aes(x=variable2, y=variable1)) + geom_point())
+#' @export 
+stata_graph <- function(x, y, dataset){
+  return(ggplot(dataset, aes(x=x, y=y)) + geom_point())
 }
 #' @import stats 
 stata_reg <- function(y, x){
