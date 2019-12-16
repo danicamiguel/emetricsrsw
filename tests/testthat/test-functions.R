@@ -1,5 +1,5 @@
 test_that("functions correct", {
-  expect_equal(stata_sum(caschool),stata_sum(caschool))
+  expect_match(stata_sum(caschool), "Min.", all = FALSE)
   expect_equal(stata_sum_var(caschool$teachers,caschool),stata_sum_var(caschool$teachers,caschool))
   expect_identical(stata_desc(caschool),stata_desc(caschool))
   expect_identical(stata_list(caschool),stata_list(caschool))
