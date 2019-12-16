@@ -12,11 +12,11 @@ stata_list_2(dataset)
 }}
 }
 \value{
-a new window containing the first two rows of a given dataset
+the first two observations of a dataset in a table
 }
 \description{
 View dataset
-Allows user to see a the first two rows of a given dataset in a new window.
+Allows user to see a the first two rows of a given dataset.
 }
 \examples{
 stata_list_2(caschool)

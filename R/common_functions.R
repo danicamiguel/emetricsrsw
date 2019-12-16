@@ -3,9 +3,9 @@
 #    stata_sum: returns summary results of specified dataset. 
 #    stata_sum_var: returns summary results of a specified variable in a given dataset. 
 #    stata_desc: returns detailed information of the dataset including the first 10 values of each of the columns.
-#    stata_list: returns a new window containing a specified dataset. 
-#    stata_list_2: returns a new window containing the first two rows of a specified dataset. 
-#    stata_list_10: returns a new window containing the first ten rows of a specified dataset. 
+#    stata_list: returns a given dataset in a table 
+#    stata_list_2: the first two rows of a dataset in a table 
+#    stata_list_10: returns the first ten rows of a dataset in a table. 
 #    stata_graph: returns a scatterplot. 
 #    stata_reg: returns the summary results of a fitted model.
 #    stata_logit: returns the summary results of a fitted logistic model. 
@@ -80,10 +80,10 @@ stata_desc <- function(dataset) {
 #' stata_list 
 #' 
 #' View dataset 
-#' Allows user to see a given dataset in a new window.   
+#' Allows user to see all the observations of the dataset in a table.
 #' 
 #' @param dataset - an R object which can be coerced to a data frame
-#' @return a new window containing the dataset 
+#' @return a given dataset in a table 
 #'  
 #' @examples 
 #' stata_list(caschool)
@@ -95,16 +95,18 @@ stata_desc <- function(dataset) {
 #' 
 #'@export 
 stata_list <- function(dataset){
-  return(View(dataset))
+  dim <- dim(dataset)
+  obs <- dim[1]
+  return(head(dataset, obs))
 }
 
 #' stata_list_2 
 #' 
 #' View dataset 
-#' Allows user to see a the first two rows of a given dataset in a new window.   
+#' Allows user to see a the first two rows of a given dataset.  
 #' 
 #' @param dataset - an R object which can be coerced to a data frame
-#' @return a new window containing the first two rows of a given dataset 
+#' @return the first two observations of a dataset in a table 
 #'  
 #' @examples 
 #' stata_list_2(caschool)
@@ -116,7 +118,7 @@ stata_list <- function(dataset){
 #' 
 #'@export
 stata_list_2 <- function(dataset){
-  return(View(head(dataset,2)))
+  return(head(dataset,2))
 }
 
 #' stata_list_10 
@@ -125,7 +127,7 @@ stata_list_2 <- function(dataset){
 #' Allows user to see a the first ten rows of a given dataset in a new window.   
 #' 
 #' @param dataset - an R object which can be coerced to a data frame
-#' @return a new window containing the first ten rows of a given dataset 
+#' @return returns the first ten rows of a dataset in a table. 
 #'  
 #' @examples 
 #' stata_list_10(caschool)
@@ -137,7 +139,7 @@ stata_list_2 <- function(dataset){
 #' 
 #'@export
 stata_list_10 <- function(dataset){
-  return(View(head(dataset,10)))
+  return(head(dataset,10))
 }
 
 #' stata_graph 
@@ -204,7 +206,7 @@ stata_reg <- function(y, x){
 #' @importFrom stats family 
 #' @export 
 stata_logit <- function(y,x) {
-  return(summmary(glm(y~x, family = binomial(link = "logit")))) 
+  return(summmary(glm(y~x, family = binomial))) 
 }
 
 #' stata_ci 

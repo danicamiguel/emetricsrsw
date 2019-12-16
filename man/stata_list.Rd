@@ -12,11 +12,11 @@ stata_list(dataset)
 }}
 }
 \value{
-a new window containing the dataset
+a given dataset in a table
 }
 \description{
 View dataset
-Allows user to see a given dataset in a new window.
+Allows user to see all the observations of the dataset in a table.
 }
 \examples{
 stata_list(caschool)

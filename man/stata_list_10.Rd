@@ -12,7 +12,7 @@ stata_list_10(dataset)
 }}
 }
 \value{
-a new window containing the first ten rows of a given dataset
+returns the first ten rows of a dataset in a table.
 }
 \description{
 View dataset
