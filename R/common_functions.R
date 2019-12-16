@@ -49,7 +49,7 @@ stata_sum <- function(dataset){
 #' stata_sum_var(teachers, caschool)
 #' }
 #' 
-#'@import mosaic 
+#'@importFrom mosaic favstats
 #'@export 
 stata_sum_var <- function(x, dataset) {
   return(favstats(x, data = dataset))
