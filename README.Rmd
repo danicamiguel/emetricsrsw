@@ -72,9 +72,9 @@ The California Standardized Testing and Reporting dataset contains data on test 
 
 ## Functionality
 
-`stat_sum`: provides summary statistics for all variables in a dataset
+`stata_sum`: provides summary statistics for all variables in a dataset
 
-`stat_sum_var`: provides summary statistics for a variable in a dataset chosen by user
+`stata_sum_var`: provides summary statistics for a variable in a dataset chosen by user
 
 `describe`: gives description of all variables in dataset, including variable classes (i.e. double, character, factor)
 

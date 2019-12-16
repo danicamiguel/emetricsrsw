@@ -71,7 +71,7 @@ stata_sum_var <- function(x, dataset) {
 #' stata_desc(caschool, mtcars)
 #' }
 #' 
-#'@import tibble 
+#'@import tibble glimpse  
 #'@export 
 stata_desc <- function(dataset) {
   return(glimpse(dataset))
@@ -156,7 +156,7 @@ stata_list_10 <- function(dataset){
 #' stata_graph(enrl_tot, teachers, caschool)
 #' } 
 #' 
-#' @import ggplot2
+#' @import ggplot2 ggplot
 #' @export 
 stata_graph <- function(x, y, dataset){
   return(ggplot(dataset, aes(x=x, y=y)) + geom_point())
@@ -178,7 +178,8 @@ stata_graph <- function(x, y, dataset){
 #' stata_reg(testscr, avginc)
 #' }
 #' 
-#' @import stats
+#' @import stats summary
+#' @import stats lm 
 #' @export  
 stata_reg <- function(y, x){
   return(summary(lm(y~x))) 
@@ -198,10 +199,11 @@ stata_reg <- function(y, x){
 #' stata_logit()
 #' }
 #' 
-#' @import stats 
+#' @import stats summary 
+#' @import stats glm
 #' @export 
 stata_logit <- function(y,x) {
-  return(glm(y~x, family = binomial(link = "logit")))
+  return(summmary(glm(y~x, family = binomial(link = "logit")))) 
 }
 
 #' stata_ci 
@@ -220,7 +222,8 @@ stata_logit <- function(y,x) {
 #' stata_ci(testscr, avginc)
 #' }
 #' 
-#' @import stats 
+#' @import stats confint 
+#' @import stats lm 
 #' @export 
 stata_ci <- function(y,x) {
   return(confint(lm(y~x)))
