@@ -1,8 +1,3 @@
-library(tidyverse)
-library(dplyr)
-#library(tibble)
-library(mosaic)
-library(ggplot2)
 
 stata_sum <- function(dataset){
   return(summary(dataset, na.rm = TRUE))
