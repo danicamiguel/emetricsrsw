@@ -92,6 +92,7 @@ stata_desc <- function(dataset) {
 #' stata_list(caschool, mtcars)
 #' }
 #' 
+#'@importFrom utils head
 #'@export 
 stata_list <- function(dataset){
   dim <- dim(dataset)
@@ -115,6 +116,7 @@ stata_list <- function(dataset){
 #' stata_list_2(caschool, mtcars)
 #' }
 #' 
+#'@importFrom utils head
 #'@export
 stata_list_2 <- function(dataset){
   return(head(dataset,2))
@@ -136,6 +138,7 @@ stata_list_2 <- function(dataset){
 #' stata_list_10(caschool, mtcars)
 #' }
 #' 
+#'@importFrom utils head
 #'@export
 stata_list_10 <- function(dataset){
   return(head(dataset,10))
@@ -145,6 +148,7 @@ stata_list_10 <- function(dataset){
 #' 
 #' Plots a scatterplot. 
 #' 
+#' @param dataset - an R object which can be coerced to a data frame
 #' @param x - x varaible 
 #' @param y - y varaible 
 #' @return scatterplot 

@@ -21,6 +21,7 @@
 #' 
 #' @importFrom stats glm
 #' @importFrom stats family 
+#' @importFrom stats binomial
 #' @export 
 stata_logit <- function(y,x) {
   return(summary((glm(y~x, family = binomial))))

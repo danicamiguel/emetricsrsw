@@ -14,6 +14,10 @@ stata_graph(x, y, dataset)
 \item{y}{\itemize{
 \item y varaible
 }}
+
+\item{dataset}{\itemize{
+\item an R object which can be coerced to a data frame
+}}
 }
 \value{
 scatterplot
