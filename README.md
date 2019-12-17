@@ -123,7 +123,7 @@ stata_sum(caschool)
 #>  Max.   :704.0   Max.   :709.5
 ```
 
-<img src="sum_caschool.png" width="50%" style="display: block; margin: auto;" />
+<img src="/man/figures/images/sum_caschool.png" width="50%" style="display: block; margin: auto;" />
 
 <center>
 
@@ -139,7 +139,7 @@ stata_sum_var(caschool$enrl_tot, caschool)
 #>   81 379  950.5 3008 27176 2628.793 3913.105 420       0
 ```
 
-<img src="sum_enrollment.png" width="50%" style="display: block; margin: auto;" />
+<img src="man/figures/images/sum_enrollment.png" width="50%" style="display: block; margin: auto;" />
 
 <center>
 

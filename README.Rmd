@@ -72,7 +72,7 @@ stata_sum(caschool)
 ```
 
 ```{r, out.width = "50%", fig.pos="h", echo = FALSE, fig.align='center'}
-include_graphics("sum_caschool.png")
+include_graphics("/man/figures/images/sum_caschool.png")
 ```
 
 <center> _Summary of caschool dataset using STATA's *sum* command._ </center>
@@ -83,7 +83,7 @@ stata_sum_var(caschool$enrl_tot, caschool)
 ```
 
 ```{r, out.width = "50%", fig.pos="h", echo = FALSE, fig.align='center'}
-include_graphics("sum_enrollment.png")
+include_graphics("man/figures/images/sum_enrollment.png")
 ```
 
 <center> _Summary of enrollment variable using STATA's *sum* command._ </center>
