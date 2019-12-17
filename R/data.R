@@ -25,6 +25,7 @@
 #'   } 
 #' @source Stock and Watson's Introduction to Econometrics, 3rd Edition. See \url{https://wps.pearsoned.com/wps/media/objects/11422/11696965/data3eu/Birthweight_Smoking_Description.pdf}
 #' 
+
 "birthweight_smoking"
 
 #' California Test Score Data Set 
@@ -56,6 +57,7 @@
 #'  } 
 #' @source Stock and Watson's Introduction to Econometrics, 3rd Edition. See \url{https://wps.pearsoned.com/aw_stock_ie_3/178/45691/11696965.cw/index.html}
 #' 
-#' "caschool"
+
+"caschool"
 
 
