@@ -8,7 +8,6 @@
 #    stata_list_10: returns the first ten rows of a dataset in a table. 
 #    stata_graph: returns a scatterplot. 
 #    stata_reg: returns the summary results of a fitted model.
-#    stata_logit: returns the summary results of a fitted logistic model. 
 #    stata_ci: returns the confidence interval of a fitted linear model. 
 
 #' stata_sum 
@@ -186,21 +185,6 @@ stata_graph <- function(x, y, dataset){
 #' @export  
 stata_reg <- function(y, x){
   return(summary(lm(y~x))) 
-}
-
-#' stata_logit 
-#' 
-#' Produces summary results of a fitted logistic model 
-#' 
-#' @param x - x variable 
-#' @param y - y variable 
-#' @return list of the result summary of a fitted logistic model 
-#' 
-#' @importFrom stats glm
-#' @importFrom stats family 
-#' @export 
-stata_logit <- function(y,x) {
-  return(summmary(glm(y~x, family = binomial))) 
 }
 
 #' stata_ci 
