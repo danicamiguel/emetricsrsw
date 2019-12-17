@@ -1,6 +1,7 @@
 ---
 output: github_document
 ---
+# <img src="man/figures/images/emetricsrsw_hex_logo.jpg" align="right" height=140/>
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <!-- badges: start -->
@@ -72,7 +73,7 @@ stata_sum(caschool)
 ```
 
 ```{r, out.width = "50%", fig.pos="h", echo = FALSE, fig.align='center'}
-include_graphics("/man/figures/images/sum_caschool.png")
+include_graphics("man/figures/images/sum_caschool.png")
 ```
 
 <center> _Summary of caschool dataset using STATA's *sum* command._ </center>

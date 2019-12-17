@@ -1,4 +1,6 @@
 
+# <img src="man/figures/images/emetricsrsw_hex_logo.jpg" align="right" height=140/>
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 <!-- badges: start -->
@@ -123,7 +125,7 @@ stata_sum(caschool)
 #>  Max.   :704.0   Max.   :709.5
 ```
 
-<img src="/man/figures/images/sum_caschool.png" width="50%" style="display: block; margin: auto;" />
+<img src="man/figures/images/sum_caschool.png" width="50%" style="display: block; margin: auto;" />
 
 <center>
 
