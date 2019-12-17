@@ -1,5 +1,5 @@
 
-# <img src="man/figures/images/emetricsrsw_hex_logo.jpg"  align="right" height=140/>
+# <img src="man/figures/images/emetricsrsw_hex_logo.jpg" align="right" height=150/>
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
