@@ -7,6 +7,7 @@
 #' subset of the data used in their paper “The Costs of Low Birth Weight,” Quarterly Journal of
 #' Economics, August 2005, 120(3): 1031-1083.
 #' 
+#' @docType data
 #' @format The file contains 3,000 observations on the variables described below: 
 #' \describe{
 #'   \item{birthweight}{birth weight of infant (in grams)}
@@ -31,6 +32,7 @@
 #' school characteristics and student demographic backgrounds. The data used here are from all 420 K-6 
 #' and K-8 districts in California with data available for 1998 and 1999. 
 #' 
+#' @docType data
 #' @format The file contains 3,000 observations on the variables described below: 
 #' \describe{
 #'   \item{dist_code}{district code}
