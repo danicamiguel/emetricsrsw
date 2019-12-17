@@ -27,7 +27,7 @@ The goal of `emetricsrsw` package is to support the exercises and examples from 
 devtools::install_github("danicamiguel/emetricsrsw")
 ```
 
-##Load
+## Load
 
 ```{r}
 library(emetricsrsw)

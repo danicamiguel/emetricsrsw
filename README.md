@@ -33,7 +33,7 @@ following:
 devtools::install_github("danicamiguel/emetricsrsw")
 ```
 
-\#\#Load
+## Load
 
 ``` r
 library(emetricsrsw)
