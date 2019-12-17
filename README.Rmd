@@ -36,39 +36,7 @@ library(emetricsrsw)
 
 The California Standardized Testing and Reporting dataset contains data on test performance, school characteristics and student demographic backgrounds. All of these data were obtained from the [California Department of Education](http://www.cde.ca.gov). For more information about this dataset see the [Companion Website](https://wps.pearsoned.com/aw_stock_ie_3/178/45691/11696965.cw/index.html) for Stock and Watson's Introduction to Econometrics. 
 
-`dist_code`: District Code
-
-`read_scr`: Average Reading Score
-
-`math_scr`: Average Math Score
-
-`county`: Country 
-
-`district`: District
-
-`gr_span`: Grade Span of District
-
-`enrl_tot`: Total Enrollment
-
-`teachers`: Teachers
-
-`computer`: Number of Computers
-
-`testscr` : Average Test Scores, (read_scr + math_scre)/2
-
-`comp_stu`: Computers per Student (computer / enrl_tot)
-
-`expn_stu`: Expentitures per Student (in $'s)
-
-`str`: Student Teacher ratio (enrl_tot / teachers)
-
-`el_pct`: Student Techer ratio (enrl_tot / teachers)
-
-`meal_pct`: Percent Qualifying for Reduced-Price Lunch 
-
-`calw_pct`: Percent Qualifying for Calworks
-
-`avginc`: District Average Income (in $1000's)
+The Birthweight_Smoking dataset contains data of infant births and dead in Pennsylvania in 1989. For more information about this dataset see the [Companion Website](https://wps.pearsoned.com/aw_stock_ie_3/178/45691/11696965.cw/index.html) for Stock and Watson's Introduction to Econometrics. 
 
 ## Functionality
 
@@ -76,7 +44,21 @@ The California Standardized Testing and Reporting dataset contains data on test 
 
 `stata_sum_var`: provides summary statistics for a variable in a dataset chosen by user
 
-`describe`: gives description of all variables in dataset, including variable classes (i.e. double, character, factor)
+`stata_desc`: gives description of all variables in dataset, including variable classes (i.e. double, character, factor)
+
+`stata_list`: allows user to see all the observations of the dataset in a table
+
+`stata_list_2`: allows user to see a the first two rows of a given dataset
+
+`stata_list_10`: allows user to see a the first ten rows of a given dataset
+
+`stata_graph`: plots a scatterplot
+
+`stata_reg`: produces result summaries of a fitted model
+
+`stata_ci`: finds the confidence interval of a fitted linear model
+
+`stata_logit`: produces summary results of a fitted logistic model
 
 
 ## Example
