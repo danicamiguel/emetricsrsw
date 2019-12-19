@@ -19,6 +19,21 @@ knitr::opts_chunk$set(
 
 # emetricsrsw
 
+##Brief Summary of Econometrics
+Econometrics is the quantitative application of statistical methods used to evaluate theories and models in economics. Econometrics sits at the intersection of multiple regression and macroeconomic and microeconomic theory.  
+
+##What is `emetricsrsw`?
+
+The goal of the `emetricsrsw` package is meant to serve as a companion to Chapter 5 of the textbook *Introduction to Econometrics* by James H. Stock and Mark W. Watson. Since this textbook was designed to assist learning in introductory econometrics courses taught at the undergraduate level, it’s expected that students will use the statistical analysis software, STATA, in order to complete the exercises and examples provided in the book. Unlike R, STATA is not a free, open-source platform - you must purchase an operating license in order to obtain the software.
+
+However, let’s say that students taking this course do not have access to STATA when they need (i.e. if you’re off campus for the weekend, but have an assignment to complete that contains questions from this textbook). This is where `emetricsrsw` comes in handy. This package has two main goals: 
+
+- Accessibility - Allow students who are familiar with STATA’s syntax and code, but have access to R to complete their statistical analysis as they would in STATA. 
+
+- Enhanced Learning - This allows students who are using Stock and Watson’s econometrics textbook to enhance their learning experience by using R to complete exercises traditionally done only in STATA. This will be especially exciting for first-time R users! 
+
+Chapter 5 of *Introduction to Econometrics* discusses hypothesis testing and confidence intervals for single linear regression. 
+
 ## Brief Summary of Econometrics
 
 Econometrics is the quantitative application of statistical methods used to evaluate theories and models in economics. Econometrics sits at the intersection of multiple regression and macroeconomic and microeconomic theory.  
@@ -37,6 +52,7 @@ This is where `emetricsrsw` comes in handy. This package has two main goals:
 - Enhanced Learning : This allows students who are using Stock and Watson’s econometrics textbook to enhance their learning experience by using R to complete exercises traditionally done only in STATA. This will be especially exciting for first-time R users! 
 
 Chapter 5 of *Introduction to Econometrics* discusses hypothesis testing and confidence intervals for single linear regression.
+
 
 ## Installation
 

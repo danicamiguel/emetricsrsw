@@ -1,80 +1,66 @@
-
+---
+output: github_document
+---
 # <img src="man/figures/images/emetricsrsw_hex_logo.jpg" align="right" height=150/>
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
 <!-- badges: start -->
-
-[![Travis build
-status](https://travis-ci.org/danicamiguel/emetricsrsw.svg?branch=master)](https://travis-ci.org/danicamiguel/emetricsrsw)
+[![Travis build status](https://travis-ci.org/danicamiguel/emetricsrsw.svg?branch=master)](https://travis-ci.org/danicamiguel/emetricsrsw)
 <!-- badges: end -->
+
+
 
 # emetricsrsw
 
-The goal of `emetricsrsw` package is to support the exercises and
-examples from Chapter 5 of *Introduction to Econometrics* by James H.
-Stock and Mark W. Watson. Since this textbook was designed to assist
-learning in introductory econometrics courses, it’s expected that users
-of the textbook will use statistical analysis software program STATA.
-However, given that STATA is not an open-source and free software
-(i.e. you must pay to obtain an operating license) this makes it
-inaccessible to those interested in learning econometrics from this
-textbook. `emetricsrsw` allows users to utilize some of the most
-commonly used STATA commands in R to perform statistical analysis -
-making it convenient and accessible for all readers of this textbook
-interested in learning econometrics without having to use STATA. It also
-takes some of the pressure off from those familiar with STATA commands
-but aren’t as familiar with R’s interface. Have fun\!
+##Brief Summary of Econometrics
+Econometrics is the quantitative application of statistical methods used to evaluate theories and models in economics. Econometrics sits at the intersection of multiple regression and macroeconomic and microeconomic theory.  
+
+##What is `emetricsrsw`?
+
+The goal of the `emetricsrsw` package is meant to serve as a companion to Chapter 5 of the textbook *Introduction to Econometrics* by James H. Stock and Mark W. Watson. Since this textbook was designed to assist learning in introductory econometrics courses taught at the undergraduate level, it’s expected that students will use the statistical analysis software, STATA, in order to complete the exercises and examples provided in the book. Unlike R, STATA is not a free, open-source platform - you must purchase an operating license in order to obtain the software.
+
+However, let’s say that students taking this course do not have access to STATA when they need (i.e. if you’re off campus for the weekend, but have an assignment to complete that contains questions from this textbook). This is where `emetricsrsw` comes in handy. This package has two main goals: 
+
+- Accessibility - Allow students who are familiar with STATA’s syntax and code, but have access to R to complete their statistical analysis as they would in STATA. 
+
+- Enhanced Learning - This allows students who are using Stock and Watson’s econometrics textbook to enhance their learning experience by using R to complete exercises traditionally done only in STATA. This will be especially exciting for first-time R users! 
+
+Chapter 5 of *Introduction to Econometrics* discusses hypothesis testing and confidence intervals for single linear regression. 
 
 ## Installation
 
-`emetricsrsw` is hosted on Github and can be installed by running the
-following:
+`emetricsrsw` is hosted on Github and can be installed by running the following: 
 
-``` r
+```r
 devtools::install_github("danicamiguel/emetricsrsw")
 ```
 
 ## Load
 
-``` r
+
+```r
 library(emetricsrsw)
 ```
 
 ## Data
 
-The California Standardized Testing and Reporting dataset contains data
-on test performance, school characteristics and student demographic
-backgrounds. All of these data were obtained from the [California
-Department of Education](http://www.cde.ca.gov). For more information
-about this dataset see the [Companion
-Website](https://wps.pearsoned.com/aw_stock_ie_3/178/45691/11696965.cw/index.html)
-for Stock and Watson’s Introduction to Econometrics.
+The California Standardized Testing and Reporting dataset contains data on test performance, school characteristics and student demographic backgrounds. All of these data were obtained from the [California Department of Education](http://www.cde.ca.gov). For more information about this dataset see the [Companion Website](https://wps.pearsoned.com/aw_stock_ie_3/178/45691/11696965.cw/index.html) for Stock and Watson's Introduction to Econometrics. 
 
-The Birthweight\_Smoking dataset contains data of infant births and dead
-in Pennsylvania in 1989. For more information about this dataset see the
-[Companion
-Website](https://wps.pearsoned.com/aw_stock_ie_3/178/45691/11696965.cw/index.html)
-for Stock and Watson’s Introduction to Econometrics.
+The Birthweight_Smoking dataset contains data of infant births and dead in Pennsylvania in 1989. For more information about this dataset see the [Companion Website](https://wps.pearsoned.com/aw_stock_ie_3/178/45691/11696965.cw/index.html) for Stock and Watson's Introduction to Econometrics. 
 
 ## Functionality
 
 `stata_sum`: provides summary statistics for all variables in a dataset
 
-`stata_sum_var`: provides summary statistics for a variable in a dataset
-chosen by user
+`stata_sum_var`: provides summary statistics for a variable in a dataset chosen by user
 
-`stata_desc`: gives description of all variables in dataset, including
-variable classes (i.e. double, character, factor)
+`stata_desc`: gives description of all variables in dataset, including variable classes (i.e. double, character, factor)
 
-`stata_list`: allows user to see all the observations of the dataset in
-a table
+`stata_list`: allows user to see all the observations of the dataset in a table
 
-`stata_list_2`: allows user to see a the first two rows of a given
-dataset
+`stata_list_2`: allows user to see a the first two rows of a given dataset
 
-`stata_list_10`: allows user to see a the first ten rows of a given
-dataset
+`stata_list_10`: allows user to see a the first ten rows of a given dataset
 
 `stata_graph`: plots a scatterplot
 
@@ -84,9 +70,12 @@ dataset
 
 `stata_logit`: produces summary results of a fitted logistic model
 
-## Example: Dataset Summary Statistics
 
-``` r
+
+
+## Example: Dataset Summary Statistics 
+
+```r
 stata_sum(caschool)
 #>  Observation Number    dist_cod        county            district        
 #>  Min.   :  1.0      Min.   :61382   Length:420         Length:420        
@@ -125,32 +114,23 @@ stata_sum(caschool)
 #>  Max.   :704.0   Max.   :709.5
 ```
 
-<img src="man/figures/images/sum_caschool.png" width="50%" style="display: block; margin: auto;" />
+<img src="man/figures/images/sum_caschool.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" width="50%" style="display: block; margin: auto;" />
 
-<center>
+<center> _Summary of caschool dataset using STATA's *sum* command._ </center>
 
-*Summary of caschool dataset using STATA’s *sum* command.*
+## Example: Variable Summary Statistics 
 
-</center>
-
-## Example: Variable Summary Statistics
-
-``` r
+```r
 stata_sum_var(caschool$enrl_tot, caschool)
-#>  min  Q1 median   Q3   max     mean       sd   n missing
-#>   81 379  950.5 3008 27176 2628.793 3913.105 420       0
+#> Error in favstats(x, data = data): could not find function "favstats"
 ```
 
-<img src="man/figures/images/sum_enrollment.png" width="50%" style="display: block; margin: auto;" />
+<img src="man/figures/images/sum_enrollment.png" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" width="50%" style="display: block; margin: auto;" />
 
-<center>
-
-*Summary of enrollment variable using STATA’s *sum* command.*
-
-</center>
+<center> _Summary of enrollment variable using STATA's *sum* command._ </center>
 
 ## Contributors
 
-  - [Lizette Carpenter](https://github.com/lcarpenter20)
-  - [Fatima Keita](https://github.com/fatimak98)
-  - [Danica Miguel](https://github.com/danicamiguel)
+- [Lizette Carpenter](https://github.com/lcarpenter20)
+- [Fatima Keita](https://github.com/fatimak98)
+- [Danica Miguel](https://github.com/danicamiguel)
