@@ -213,5 +213,3 @@ stata_reg <- function(y, x){
 stata_ci <- function(y,x) {
   return(confint(lm(y~x)))
 }
-
- 

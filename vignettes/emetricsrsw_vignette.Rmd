@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Emetricsrsw"
+title: "Introduction to emetricsrsw"
 author: "Danica Miguel, Lizette Carpenter, Fatima Keita"
 output: rmarkdown::html_vignette
 vignette: >
@@ -19,20 +19,25 @@ library(ggplot2)
 library(emetricsrsw)
 ```
 
-##Brief Summary of Econometrics
+## Brief Summary of Econometrics
+
 Econometrics is the quantitative application of statistical methods used to evaluate theories and models in economics. Econometrics sits at the intersection of multiple regression and macroeconomic and microeconomic theory.  
 
-##What is `emetricsrsw`?
+## What is `emetricsrsw`?
 
 The goal of the `emetricsrsw` package is meant to serve as a companion to Chapter 5 of the textbook *Introduction to Econometrics* by James H. Stock and Mark W. Watson. Since this textbook was designed to assist learning in introductory econometrics courses taught at the undergraduate level, it’s expected that students will use the statistical analysis software, STATA, in order to complete the exercises and examples provided in the book. Unlike R, STATA is not a free, open-source platform - you must purchase an operating license in order to obtain the software.
 
-However, let’s say that students taking this course do not have access to STATA when they need (i.e. if you’re off campus for the weekend, but have an assignment to complete that contains questions from this textbook). This is where `emetricsrsw` comes in handy. This package has two main goals: 
+However, let’s say that students taking this course do not have access to STATA when they need (i.e. if you’re off campus for the weekend, but have an assignment to complete that contains questions from this textbook). 
 
-- Accessibility - Allow students who are familiar with STATA’s syntax and code, but have access to R to complete their statistical analysis as they would in STATA. 
 
-- Enhanced Learning - This allows students who are using Stock and Watson’s econometrics textbook to enhance their learning experience by using R to complete exercises traditionally done only in STATA. This will be especially exciting for first-time R users! 
+This is where `emetricsrsw` comes in handy. This package has two main goals: 
+
+- Accessibility : Allow students who are familiar with STATA’s syntax and code, but have access to R to complete their statistical analysis as they would in STATA. 
+
+- Enhanced Learning : This allows students who are using Stock and Watson’s econometrics textbook to enhance their learning experience by using R to complete exercises traditionally done only in STATA. This will be especially exciting for first-time R users! 
 
 Chapter 5 of *Introduction to Econometrics* discusses hypothesis testing and confidence intervals for single linear regression. 
+
 
 ### Chapter 5 Dataset
 The data used in Chapter 5 is the California Standardized Testing and Reporting (STAR) dataset. It contains 18 variables across 420 districts from 1998-1999. More information and other datasets used in this textbook can be found [here](https://wps.pearsoned.com/aw_stock_ie_3/178/45691/11696965.cw/index.html).
@@ -44,7 +49,13 @@ Hypothesis testing
 Confidence Intervals 
 
 #### Taking a Peek at Your Data
-If a researcher wanted to take a quick peek at some of their raw data’s variables & values without having to open the data viewer in R they could use the `head()`, `View()` or `glimpse()` functions. 
+If a researcher wanted to take a quick peek at some of their raw data’s variables & values without having to open the data viewer in R they could use the `head()`, `View()` or `glimpse()` functions. In STATA, they would use the `list()` function. Using `emetricsrsw`'s `stata_list_2()` function can help produce the first two rows of a dataset defined by the user or `stata_list_10()` to see the first ten rows:
+
+```{r}
+stata_list_2(caschool)
+
+stata_list_10(caschool)
+```
 
 #### Summarizing and Describing data 
 It’s not uncommon for statisticians to begin their exploratory data analysis by evaluating your data’s summary statistics (i.e. mean, median,  minimum value, maximum value, 1st quartile value and 3rd quartile value) and variable classes. Understanding what variables you have available and how they are measured/defined is also important. 
@@ -61,28 +72,58 @@ stata_sum(caschool)
 stata_sum_var(caschool$enrl_tot)
 ```
 
-#### Confidence Intervals
+#### Simple Linear Regression
 
-Similar to hypothesis tests, confidence intervals help us say something meaningful about our population mean. More specifically, it 
+Learning how to construct and evaluate a linear regression model is one of the first lessons in an introductory statistics course. Setting up a linear regression model allows you to say something about relationships between variables in your dataset. More specifically, you want to know if independent variables of your choosing are satisfactory predictors of a dependent variable of interest. Using our California schools dataset, `caschool`, let's create a simple linear regression model we're interested in assessing. 
+
+Let's say we're interested in seeing if average household income relates to student performance (measured by test scores). We can set up the following structural model:
+
+Population Regression Model: $testscr_i = \beta_{0} + \beta_{1} avginc_i + \epsilon_i, i=1,\dots,n$
+
+This would yield the following sample/estimate model, which we will be assessing using our regression function.
+
+Sample/Estimated Regression Model: $\widehat testscr_i = \widehat\beta_{0} + \widehat\beta_{1} avginc_i, i=1,\dots,n$
+
+```{r echo=TRUE}
+stata_reg(caschool$testscr, caschool$avginc)
+```
+This summary regression output shows us that our independent variable, `avginc`, is a statisically significant predictor of our dependent variable of interest, `testscr` at the 10%, 5%, and 1% significance levels. Thus, we can say that a relationship between a student's family's household income and their academic performance may exist. 
 
 #### Hypothesis Testing
 
 This chapter describes how and why researchers use two-sided hypothesis tests. The ultimate goal of hypothesis tests is the same as the goal for all statistical tests - using a sample subset’s statistics to gain a better understanding of the population in question at large. The null hypothesis ($H_0$) is a claim the researcher is trying to disprove, meaning they hope the outcome of the hypothesis test proves the alternative claim ($H_A$) true. 
 
+Continuing on from our example above, we can set up a hypothesis test testing our claim that a relationship between `avginc` and `testscr` exists. Our null hypothesis would be: 
+
+$H_0$: $\beta_1 = 0$
+meaning a relationship between a student's academic performance and their family's average household income is not statistically significantly different from 0 (aka no relationship exists between these two variables). 
+
+$H_A$: $\beta_1 \neq 0$ 
+Since this is two-sided test, our alternative is the claim we actually want to prove is true - that a relationship between these two variables does indeed exist.
+
+There are three steps for testing for these hypotheses:
+(1) compute the standard error of $\widehat\beta_{1}$. 
+(2) compute the t-statistic. 
+(3) compute the p-value, and determine result of the test. 
+
+We can the calculations for each of these steps from the regression summary output. 
+
 ```{r}
+stata_reg(caschool$testscr, caschool$avginc)
 ```
 
-#### Simple Linear Regression
+(1) Our standard error of $\widehat\beta_{1} avginc$ is 0.0905. 
+(2) Our t-stat is $\widehat\beta_{1} avginc$ 20.76.
+(3) Our p-value is very close to 0, which is smaller than all signifance levels (0.1, 0.05, and 0.01) so this regressor `avginc` is statistically significant at all significance levels. 
 
-Learning how to construct and evaluate a linear regression model is one of the first lessons in an introductory statistics course. 
-Population Regression Model: $y_i = \beta_{0} + \beta_{1} x_i + \epsilon_i, i=1,\dots,n$
+Thus, we reject the null hypothesis that a relationship between average household income and student academic performance does not exist and can uphold the alternative hypothesis.
 
-Sample/Estimated Regression Model: $\widehat y_i = \widehat\beta_{0} + \widehat\beta_{1} x_i, i=1,\dots,n$
+#### Confidence Interval
 
-```{r}
+After setting up you're two-sided hypothesis, we can construct a confidence interval for our $\widehat\beta_{1}$ estimate. A confidence interval gives us a set of values that cannot be rejected within a 5% significance level. This leaves us with a range of values with which we are 'confident' that the 95% probability of containing the true value of our population parameter $\beta_{1}$ lies. Constructing a confidence interval is another way to help confirm the results of a two-sided hypothesis test, aside from assessing the t-stat compared to its critical value and the p-value compared to the conventional significance levels (10%, 5%, 1%).
 
+```{r echo=TRUE}
+stata_ci(caschool$testscr, caschool$avginc)
 ```
 
-#### Is our $\widehat\beta_{1}$ value the most unbiased estimator?
-
-Here's where the application to economic theory comes in. One of the most important theorems in econometrics is the Gauss-Markov Theorem. This is a mathematical result 
+Thus, from these results we can say we are 95% confident that the true value of $\beta_{1}$ lies between the lower and upper bound of this confidence interval. We can also confirm the results of our hypothesis test to reject $H_0$ since 0 does not lie within our confidence interval. 
