@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Emetricsrsw"
+title: "Introduction to emetricsrsw"
 author: "Danica Miguel, Lizette Carpenter, Fatima Keita"
 output: rmarkdown::html_vignette
 vignette: >
@@ -19,10 +19,11 @@ library(ggplot2)
 library(emetricsrsw)
 ```
 
-##Brief Summary of Econometrics
+## Brief Summary of Econometrics
+
 Econometrics is the quantitative application of statistical methods used to evaluate theories and models in economics. Econometrics sits at the intersection of multiple regression and macroeconomic and microeconomic theory.  
 
-##What is `emetricsrsw`?
+## What is `emetricsrsw`?
 
 The goal of the `emetricsrsw` package is meant to serve as a companion to Chapter 5 of the textbook *Introduction to Econometrics* by James H. Stock and Mark W. Watson. Since this textbook was designed to assist learning in introductory econometrics courses taught at the undergraduate level, it’s expected that students will use the statistical analysis software, STATA, in order to complete the exercises and examples provided in the book. Unlike R, STATA is not a free, open-source platform - you must purchase an operating license in order to obtain the software.
 
