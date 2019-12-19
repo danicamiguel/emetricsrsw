@@ -1,6 +1,6 @@
 ---
-title: "Introduction to Emetricsrsw""
-author: "Danica Miguel", "Lizette Carpenter" "Fatima Keita"
+title: "Introduction to Emetricsrsw"
+author: "Danica Miguel, Lizette Carpenter, Fatima Keita"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Vignette Title}
@@ -13,11 +13,8 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-```
-
-```{r setup}
 library(tibble)
-library(mosiac)
+#library(mosiac)
 library(stats)
 library(ggplot2)
 library(emetricsrsw)
@@ -58,7 +55,7 @@ We can use the `stata_sum()` function to derive summary statistics for all varia
 Using the `stata_desc()` function allows users to see how many rows (observations) and columns (variables) the dataset contains, in addition to listing each variable’s class (factor, logical, double, character). This is very similar to base R’s `str()` function, and the `glimpse()` function in the `tibble` package. 
 
 ```{r}
-desc(caschool)
+stata_desc(caschool)
 
 stata_sum(caschool)
 
