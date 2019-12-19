@@ -1,13 +1,14 @@
 ---
-title: "my-vignette"
+title: "Introduction to Emetricsrsw""
+author: "Danica Miguel", "Lizette Carpenter" "Fatima Keita"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{my-vignette}
+  %\VignetteIndexEntry{Vignette Title}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, include = FALSE}
+```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -15,5 +16,77 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
+library(tibble)
+library(mosiac)
+library(stats)
+library(ggplot2)
 library(emetricsrsw)
 ```
+
+##Brief Summary of Econometrics
+Econometrics is the quantitative application of statistical methods used to evaluate theories and models in economics. Econometrics sits at the intersection of multiple regression and macroeconomic and microeconomic theory.  
+
+##What is `emetricsrsw`?
+
+The goal of the `emetricsrsw` package is meant to serve as a companion to Chapter 5 of the textbook *Introduction to Econometrics* by James H. Stock and Mark W. Watson. Since this textbook was designed to assist learning in introductory econometrics courses taught at the undergraduate level, it’s expected that students will use the statistical analysis software, STATA, in order to complete the exercises and examples provided in the book. Unlike R, STATA is not a free, open-source platform - you must purchase an operating license in order to obtain the software.
+
+However, let’s say that students taking this course do not have access to STATA when they need (i.e. if you’re off campus for the weekend, but have an assignment to complete that contains questions from this textbook). This is where `emetricsrsw` comes in handy. This package has two main goals: 
+
+- Accessibility - Allow students who are familiar with STATA’s syntax and code, but have access to R to complete their statistical analysis as they would in STATA. 
+
+- Enhanced Learning - This allows students who are using Stock and Watson’s econometrics textbook to enhance their learning experience by using R to complete exercises traditionally done only in STATA. This will be especially exciting for first-time R users! 
+
+Chapter 5 of *Introduction to Econometrics* discusses hypothesis testing and confidence intervals for single linear regression. 
+
+### Chapter 5 Dataset
+The data used in Chapter 5 is the California Standardized Testing and Reporting (STAR) dataset. It contains 18 variables across 420 districts from 1998-1999. More information and other datasets used in this textbook can be found [here](https://wps.pearsoned.com/aw_stock_ie_3/178/45691/11696965.cw/index.html).
+
+
+### Chapter 5 Content Details
+Simple Linear Regression 
+Hypothesis testing 
+Confidence Intervals 
+
+#### Taking a Peek at Your Data
+If a researcher wanted to take a quick peek at some of their raw data’s variables & values without having to open the data viewer in R they could use the `head()`, `View()` or `glimpse()` functions. 
+
+#### Summarizing and Describing data 
+It’s not uncommon for statisticians to begin their exploratory data analysis by evaluating your data’s summary statistics (i.e. mean, median,  minimum value, maximum value, 1st quartile value and 3rd quartile value) and variable classes. Understanding what variables you have available and how they are measured/defined is also important. 
+
+We can use the `stata_sum()` function to derive summary statistics for all variables in a dataset chosen by the user (that’s been imported into the global R environment). Using the `stata_sum_var()` function helps indicate summary statistics for a specified variable within a dataset. This is very similar to base R’s `summary()` function. 
+
+Using the `stata_desc()` function allows users to see how many rows (observations) and columns (variables) the dataset contains, in addition to listing each variable’s class (factor, logical, double, character). This is very similar to base R’s `str()` function, and the `glimpse()` function in the `tibble` package. 
+
+```{r}
+desc(caschool)
+
+stata_sum(caschool)
+
+stata_sum_var(caschool$enrl_tot)
+```
+
+#### Confidence Intervals
+
+Similar to hypothesis tests, confidence intervals help us say something meaningful about our population mean. More specifically, it 
+
+#### Hypothesis Testing
+
+This chapter describes how and why researchers use two-sided hypothesis tests. The ultimate goal of hypothesis tests is the same as the goal for all statistical tests - using a sample subset’s statistics to gain a better understanding of the population in question at large. The null hypothesis ($H_0$) is a claim the researcher is trying to disprove, meaning they hope the outcome of the hypothesis test proves the alternative claim ($H_A$) true. 
+
+```{r}
+```
+
+#### Simple Linear Regression
+
+Learning how to construct and evaluate a linear regression model is one of the first lessons in an introductory statistics course. 
+Population Regression Model: $y_i = \beta_{0} + \beta_{1} x_i + \epsilon_i, i=1,\dots,n$
+
+Sample/Estimated Regression Model: $\widehat y_i = \widehat\beta_{0} + \widehat\beta_{1} x_i, i=1,\dots,n$
+
+```{r}
+
+```
+
+#### Is our $\widehat\beta_{1}$ value the most unbiased estimator?
+
+Here's where the application to economic theory comes in. One of the most important theorems in econometrics is the Gauss-Markov Theorem. This is a mathematical result 
